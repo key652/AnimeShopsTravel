@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE35E77A095A947DE61FA53B /* Pods_AnimeShopsTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */; };
+		EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83624C34604008E65C8 /* MapViewController.swift */; };
+		EA17D83924C346CF008E65C8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83824C346CF008E65C8 /* MapView.swift */; };
+		EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83C24C36C2C008E65C8 /* CustomColor.swift */; };
+		EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83E24C37164008E65C8 /* ShopPinsData.swift */; };
+		EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6B24C3438B00F6111F /* AppDelegate.swift */; };
+		EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6D24C3438B00F6111F /* SceneDelegate.swift */; };
+		EA243A7324C3438B00F6111F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7124C3438B00F6111F /* Main.storyboard */; };
+		EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */; };
+		EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7724C3438C00F6111F /* Assets.xcassets */; };
+		EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */; };
+		EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57918224C42B2000BED8B7 /* WebViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AF3E13CEBAF49E877823178 /* Pods-AnimeShopsTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.release.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.release.xcconfig"; sourceTree = "<group>"; };
+		10FD69648F2CECA02645465A /* Pods-AnimeShopsTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.debug.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeShopsTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA17D83624C34604008E65C8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EA17D83824C346CF008E65C8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EA17D83C24C36C2C008E65C8 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		EA17D83E24C37164008E65C8 /* ShopPinsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPinsData.swift; sourceTree = "<group>"; };
+		EA243A6824C3438B00F6111F /* AnimeShopsTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeShopsTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA243A6B24C3438B00F6111F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA243A6D24C3438B00F6111F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA243A7224C3438B00F6111F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA243A7524C3438B00F6111F /* AnimeShopsTravel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimeShopsTravel.xcdatamodel; sourceTree = "<group>"; };
+		EA243A7724C3438C00F6111F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA243A7A24C3438C00F6111F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA243A7C24C3438C00F6111F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA57918224C42B2000BED8B7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA243A6524C3438B00F6111F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE35E77A095A947DE61FA53B /* Pods_AnimeShopsTravel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3605B9620208C3676766C033 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A9698C3A0223CE66F3C13A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10FD69648F2CECA02645465A /* Pods-AnimeShopsTravel.debug.xcconfig */,
+				0AF3E13CEBAF49E877823178 /* Pods-AnimeShopsTravel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA243A5F24C3438B00F6111F = {
+			isa = PBXGroup;
+			children = (
+				EA243A6A24C3438B00F6111F /* AnimeShopsTravel */,
+				EA243A6924C3438B00F6111F /* Products */,
+				8A9698C3A0223CE66F3C13A1 /* Pods */,
+				3605B9620208C3676766C033 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA243A6924C3438B00F6111F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA243A6824C3438B00F6111F /* AnimeShopsTravel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA243A6A24C3438B00F6111F /* AnimeShopsTravel */ = {
+			isa = PBXGroup;
+			children = (
+				EA243A8424C343EF00F6111F /* Model */,
+				EA243A8324C343E500F6111F /* Controller */,
+				EA243A8224C343DB00F6111F /* View */,
+				EA243A6B24C3438B00F6111F /* AppDelegate.swift */,
+				EA243A6D24C3438B00F6111F /* SceneDelegate.swift */,
+				EA243A7124C3438B00F6111F /* Main.storyboard */,
+				EA243A7724C3438C00F6111F /* Assets.xcassets */,
+				EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */,
+				EA243A7C24C3438C00F6111F /* Info.plist */,
+				EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */,
+			);
+			path = AnimeShopsTravel;
+			sourceTree = "<group>";
+		};
+		EA243A8224C343DB00F6111F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA17D83824C346CF008E65C8 /* MapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA243A8324C343E500F6111F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA17D83624C34604008E65C8 /* MapViewController.swift */,
+				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA243A8424C343EF00F6111F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA17D83E24C37164008E65C8 /* ShopPinsData.swift */,
+				EA17D83C24C36C2C008E65C8 /* CustomColor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA243A6724C3438B00F6111F /* AnimeShopsTravel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA243A7F24C3438C00F6111F /* Build configuration list for PBXNativeTarget "AnimeShopsTravel" */;
+			buildPhases = (
+				260FB2428DA5202146D74F73 /* [CP] Check Pods Manifest.lock */,
+				EA243A6424C3438B00F6111F /* Sources */,
+				EA243A6524C3438B00F6111F /* Frameworks */,
+				EA243A6624C3438B00F6111F /* Resources */,
+				AC3367FC06E21472DD340A90 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimeShopsTravel;
+			productName = AnimeShopsTravel;
+			productReference = EA243A6824C3438B00F6111F /* AnimeShopsTravel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA243A6024C3438B00F6111F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "yuma yada";
+				TargetAttributes = {
+					EA243A6724C3438B00F6111F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = EA243A6324C3438B00F6111F /* Build configuration list for PBXProject "AnimeShopsTravel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA243A5F24C3438B00F6111F;
+			productRefGroup = EA243A6924C3438B00F6111F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA243A6724C3438B00F6111F /* AnimeShopsTravel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA243A6624C3438B00F6111F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */,
+				EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */,
+				EA243A7324C3438B00F6111F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		260FB2428DA5202146D74F73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimeShopsTravel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3367FC06E21472DD340A90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA243A6424C3438B00F6111F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */,
+				EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */,
+				EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */,
+				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
+				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
+				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
+				EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */,
+				EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA243A7124C3438B00F6111F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA243A7224C3438B00F6111F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA243A7A24C3438C00F6111F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA243A7D24C3438C00F6111F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA243A7E24C3438C00F6111F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA243A8024C3438C00F6111F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FD69648F2CECA02645465A /* Pods-AnimeShopsTravel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZNBFUQB6Y;
+				INFOPLIST_FILE = AnimeShopsTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.key.AnimeShopsTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EA243A8124C3438C00F6111F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF3E13CEBAF49E877823178 /* Pods-AnimeShopsTravel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZNBFUQB6Y;
+				INFOPLIST_FILE = AnimeShopsTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.key.AnimeShopsTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA243A6324C3438B00F6111F /* Build configuration list for PBXProject "AnimeShopsTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA243A7D24C3438C00F6111F /* Debug */,
+				EA243A7E24C3438C00F6111F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA243A7F24C3438C00F6111F /* Build configuration list for PBXNativeTarget "AnimeShopsTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA243A8024C3438C00F6111F /* Debug */,
+				EA243A8124C3438C00F6111F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA243A7524C3438B00F6111F /* AnimeShopsTravel.xcdatamodel */,
+			);
+			currentVersion = EA243A7524C3438B00F6111F /* AnimeShopsTravel.xcdatamodel */;
+			path = AnimeShopsTravel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA243A6024C3438B00F6111F /* Project object */;
+}
