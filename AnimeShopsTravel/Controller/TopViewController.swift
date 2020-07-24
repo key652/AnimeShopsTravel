@@ -9,7 +9,7 @@
 import UIKit
 
 class TopViewController: UIViewController {
-    var myView = TopView()
+    private let myView = TopView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

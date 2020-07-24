@@ -13,7 +13,7 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     private let myView = MapView()
-    let customColor = CustomColor.mainColor
+    private let customColor = CustomColor.mainColor
     
     override func loadView() {
         super.loadView()

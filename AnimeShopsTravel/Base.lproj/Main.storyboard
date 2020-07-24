@@ -36,11 +36,28 @@
                     <navigationItem key="navigationItem" id="Wn0-JH-ILI"/>
                     <connections>
                         <segue destination="YsA-3S-C2x" kind="show" id="uOA-ne-fG7"/>
+                        <segue destination="lus-Pz-lj8" kind="show" id="Zk6-v1-E5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2I-VY-Ab1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="116"/>
+            <point key="canvasLocation" x="2887" y="-218"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="MFr-B7-dZb">
+            <objects>
+                <viewController storyboardIdentifier="signup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lus-Pz-lj8" customClass="SignupViewController" customModule="AnimeShopsTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cjg-4Y-wgN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hg0-aZ-z2k"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ht2-7n-hEu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GE-Jt-eZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887" y="526"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ccZ-JZ-bit">
@@ -56,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh8-II-WsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3613" y="116"/>
+            <point key="canvasLocation" x="3922" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uRf-NU-MMg">

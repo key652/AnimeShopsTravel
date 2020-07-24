@@ -26,6 +26,8 @@
 		EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */; };
 		EA53BE4124CA87590078669E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA53BE4024CA87590078669E /* GoogleService-Info.plist */; };
 		EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57918224C42B2000BED8B7 /* WebViewController.swift */; };
+		EA5B132624CAA3F700239073 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132524CAA3F700239073 /* SignupView.swift */; };
+		EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132724CAAC1200239073 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreateView.swift; sourceTree = "<group>"; };
 		EA53BE4024CA87590078669E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA57918224C42B2000BED8B7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EA5B132524CAA3F700239073 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		EA5B132724CAAC1200239073 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				EA17D83824C346CF008E65C8 /* MapView.swift */,
 				EA53BE3224C9CEB30078669E /* TopView.swift */,
 				EA53BE3824C9D8CA0078669E /* LoginView.swift */,
+				EA5B132524CAA3F700239073 /* SignupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
 				EA53BE3424C9D63F0078669E /* TopViewController.swift */,
 				EA53BE3A24C9E91A0078669E /* LoginViewController.swift */,
+				EA5B132724CAAC1200239073 /* SignupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +282,8 @@
 				EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
 				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
+				EA5B132624CAA3F700239073 /* SignupView.swift in Sources */,
+				EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */,
 				EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */,
 				EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */,
 				EA53BE3324C9CEB30078669E /* TopView.swift in Sources */,
