@@ -18,6 +18,13 @@
 		EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */; };
 		EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7724C3438C00F6111F /* Assets.xcassets */; };
 		EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */; };
+		EA53BE3324C9CEB30078669E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3224C9CEB30078669E /* TopView.swift */; };
+		EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3424C9D63F0078669E /* TopViewController.swift */; };
+		EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3824C9D8CA0078669E /* LoginView.swift */; };
+		EA53BE3B24C9E91A0078669E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3A24C9E91A0078669E /* LoginViewController.swift */; };
+		EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3C24CA709B0078669E /* AuthModel.swift */; };
+		EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */; };
+		EA53BE4124CA87590078669E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA53BE4024CA87590078669E /* GoogleService-Info.plist */; };
 		EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57918224C42B2000BED8B7 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,13 @@
 		EA243A7724C3438C00F6111F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA243A7A24C3438C00F6111F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA243A7C24C3438C00F6111F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA53BE3224C9CEB30078669E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		EA53BE3424C9D63F0078669E /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		EA53BE3824C9D8CA0078669E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EA53BE3A24C9E91A0078669E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA53BE3C24CA709B0078669E /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreateView.swift; sourceTree = "<group>"; };
+		EA53BE4024CA87590078669E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA57918224C42B2000BED8B7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +114,7 @@
 				EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */,
 				EA243A7C24C3438C00F6111F /* Info.plist */,
 				EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */,
+				EA53BE4024CA87590078669E /* GoogleService-Info.plist */,
 			);
 			path = AnimeShopsTravel;
 			sourceTree = "<group>";
@@ -108,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				EA17D83824C346CF008E65C8 /* MapView.swift */,
+				EA53BE3224C9CEB30078669E /* TopView.swift */,
+				EA53BE3824C9D8CA0078669E /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +134,8 @@
 			children = (
 				EA17D83624C34604008E65C8 /* MapViewController.swift */,
 				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
+				EA53BE3424C9D63F0078669E /* TopViewController.swift */,
+				EA53BE3A24C9E91A0078669E /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +145,8 @@
 			children = (
 				EA17D83E24C37164008E65C8 /* ShopPinsData.swift */,
 				EA17D83C24C36C2C008E65C8 /* CustomColor.swift */,
+				EA53BE3C24CA709B0078669E /* AuthModel.swift */,
+				EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +214,7 @@
 				EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */,
 				EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */,
 				EA243A7324C3438B00F6111F /* Main.storyboard in Resources */,
+				EA53BE4124CA87590078669E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA53BE3B24C9E91A0078669E /* LoginViewController.swift in Sources */,
 				EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */,
 				EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */,
+				EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */,
 				EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */,
 				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
+				EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
 				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
 				EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */,
+				EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */,
+				EA53BE3324C9CEB30078669E /* TopView.swift in Sources */,
 				EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */,
+				EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
