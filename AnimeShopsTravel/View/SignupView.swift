@@ -57,7 +57,7 @@ class SignupView: UIView {
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         signupButton.translatesAutoresizingMaskIntoConstraints = false
         
-        nameTextField.topAnchor.constraint(equalTo: topAnchor, constant: 80).isActive = true
+        nameTextField.topAnchor.constraint(equalTo: topAnchor, constant: 100).isActive = true
         nameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45).isActive = true
         nameTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -45).isActive = true
         nameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true

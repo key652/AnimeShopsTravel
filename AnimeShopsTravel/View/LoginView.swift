@@ -72,7 +72,7 @@ class LoginView: UIView {
         signupButton.translatesAutoresizingMaskIntoConstraints = false
         resetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         
-        addressTextField.topAnchor.constraint(equalTo: topAnchor, constant: 80).isActive = true
+        addressTextField.topAnchor.constraint(equalTo: topAnchor, constant: 100).isActive = true
         addressTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45).isActive = true
         addressTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -45).isActive = true
         addressTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
