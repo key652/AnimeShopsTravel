@@ -19,6 +19,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view = myView
         view.backgroundColor = UIColor.white
         view.sendSubviewToBack(view)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = CustomColor.mainColor
+        navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self
         self.delegate = authModel

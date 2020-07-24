@@ -31,7 +31,7 @@ class AuthModel: AuthDelegate {
                 self.alert.alertCreate(title: "メールアドレスまたはパスワードが間違っています。", message: "", actionTitle: "OK", viewCotroller: viewController)
             }else{
                 self.createLoginToken()
-                let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "map")as! MapViewController
+                let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
                 viewController.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
@@ -53,7 +53,7 @@ class AuthModel: AuthDelegate {
         }else{
             createUser(email: email, password: password, name: name, viewController: viewController)
             createLoginToken()
-            let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "map")as! MapViewController
+            let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
             viewController.navigationController?.pushViewController(nextVC, animated: true)
         }
     }

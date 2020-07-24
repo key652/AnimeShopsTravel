@@ -18,6 +18,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         view = myView
         view.backgroundColor = UIColor.white
         view.sendSubviewToBack(view)
+        navigationController?.navigationBar.barTintColor = CustomColor.mainColor
         myView.nameTextField.delegate = self
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self

@@ -28,6 +28,9 @@
 		EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57918224C42B2000BED8B7 /* WebViewController.swift */; };
 		EA5B132624CAA3F700239073 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132524CAA3F700239073 /* SignupView.swift */; };
 		EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132724CAAC1200239073 /* SignupViewController.swift */; };
+		EA5B132C24CAF24B00239073 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132B24CAF24B00239073 /* TabBarViewController.swift */; };
+		EA5B132E24CB00D800239073 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132D24CB00D800239073 /* AreaViewController.swift */; };
+		EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132F24CB07D200239073 /* AreaShopsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		EA57918224C42B2000BED8B7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EA5B132524CAA3F700239073 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		EA5B132724CAAC1200239073 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EA5B132B24CAF24B00239073 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EA5B132D24CB00D800239073 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
+		EA5B132F24CB07D200239073 /* AreaShopsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaShopsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		EA243A6A24C3438B00F6111F /* AnimeShopsTravel */ = {
 			isa = PBXGroup;
 			children = (
+				EA5B133124CB0DB700239073 /* ShopData */,
 				EA243A8424C343EF00F6111F /* Model */,
 				EA243A8324C343E500F6111F /* Controller */,
 				EA243A8224C343DB00F6111F /* View */,
@@ -137,11 +144,13 @@
 		EA243A8324C343E500F6111F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA17D83624C34604008E65C8 /* MapViewController.swift */,
-				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
 				EA53BE3424C9D63F0078669E /* TopViewController.swift */,
 				EA53BE3A24C9E91A0078669E /* LoginViewController.swift */,
 				EA5B132724CAAC1200239073 /* SignupViewController.swift */,
+				EA5B132B24CAF24B00239073 /* TabBarViewController.swift */,
+				EA17D83624C34604008E65C8 /* MapViewController.swift */,
+				EA5B132D24CB00D800239073 /* AreaViewController.swift */,
+				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,12 +158,20 @@
 		EA243A8424C343EF00F6111F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA17D83E24C37164008E65C8 /* ShopPinsData.swift */,
 				EA17D83C24C36C2C008E65C8 /* CustomColor.swift */,
-				EA53BE3C24CA709B0078669E /* AuthModel.swift */,
 				EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */,
+				EA53BE3C24CA709B0078669E /* AuthModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA5B133124CB0DB700239073 /* ShopData */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B132F24CB07D200239073 /* AreaShopsData.swift */,
+				EA17D83E24C37164008E65C8 /* ShopPinsData.swift */,
+			);
+			path = ShopData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,13 +297,16 @@
 				EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */,
 				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
 				EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */,
+				EA5B132E24CB00D800239073 /* AreaViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
 				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
+				EA5B132C24CAF24B00239073 /* TabBarViewController.swift in Sources */,
 				EA5B132624CAA3F700239073 /* SignupView.swift in Sources */,
 				EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */,
 				EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */,
 				EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */,
 				EA53BE3324C9CEB30078669E /* TopView.swift in Sources */,
+				EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */,
 				EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */,
 				EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */,
 			);
