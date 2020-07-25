@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
 class WebViewController: UIViewController {
     var ShopUrl:String!
+    var myView = WebView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view = myView
+        if let shopUrl = URL(string: ShopUrl) {
+            self.myView.webView.load(URLRequest(url: shopUrl))
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
 }
