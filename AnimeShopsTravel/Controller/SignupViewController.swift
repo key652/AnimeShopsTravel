@@ -11,7 +11,7 @@ import UIKit
 class SignupViewController: UIViewController, UITextFieldDelegate{
     private let myView = SignupView()
     private let authModel = AuthModel()
-    weak var delegate:AuthDelegate?
+    weak var authDelegate:AuthDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         myView.nameTextField.delegate = self
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self
-        self.delegate = authModel
+        self.authDelegate = authModel
         ButtonActionSet()
     }
     
@@ -51,7 +51,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         guard let userName = myView.nameTextField.text else { return }
         guard let email = myView.addressTextField.text else { return }
         guard let password = myView.passwordTextField.text else { return }
-        delegate?.singup(email: email, password: password, name: userName, viewController: self)
+        authDelegate?.singup(email: email, password: password, name: userName, viewController: self)
     }
 
 

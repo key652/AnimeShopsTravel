@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     private let myView = LoginView()
-    weak var delegate: AuthDelegate?
+    weak var authDelegate: AuthDelegate?
     private let authModel = AuthModel()
     
 
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self
-        self.delegate = authModel
+        self.authDelegate = authModel
         buttonActionSet()
     }
     
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc private func loginButtonTaped() {
         guard let email = myView.addressTextField.text else { return }
         guard let password = myView.passwordTextField.text else { return }
-        delegate?.login(email: email, password: password, viewController: self)
+        authDelegate?.login(email: email, password: password, viewController: self)
     }
     
     
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @objc private func resetPasswordButtonTaped() {
-        delegate?.resetPassword()
+        authDelegate?.resetPassword()
     }
 
 
