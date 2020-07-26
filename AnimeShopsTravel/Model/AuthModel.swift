@@ -6,7 +6,6 @@
 //  Copyright © 2020 yuma yada. All rights reserved.
 //
 
-import Foundation
 import Firebase
 
 
@@ -73,7 +72,7 @@ class AuthModel: AuthDelegate {
     
     
     //プロフィール初期画像とユーザーIDをUserDefalutに保存します。(func signup)
-    private func UserDefalutSetData(uid: String, name:String) {
+    private func UserDefalutSetData(uid: String, name: String) {
         guard let profileImage = UIImage(named: "noimage") else { return }
         guard let profileImageData = profileImage.jpegData(compressionQuality: 0.1) else { return }
         UserDefaults.standard.set(profileImageData, forKey: "profileImageData")
