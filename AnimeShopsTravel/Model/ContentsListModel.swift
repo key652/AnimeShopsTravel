@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 protocol ContentsListDelegate: class {
-    func fetchContentsData()
+    func fetchContentsData(tableView: UITableView)
 }
 
 class ContentsList: ContentsListDelegate {
@@ -18,7 +18,7 @@ class ContentsList: ContentsListDelegate {
     public var contentsArray = [Contents]()
     
     
-    func fetchContentsData() {
+    func fetchContentsData(tableView: UITableView) {
         ref.child("timeLine").queryOrdered(byChild: "createAt").observe(.value) { (snapshots) in
             self.contentsArray.removeAll()
             let snapshot = snapshots.children.allObjects as! [DataSnapshot]
@@ -29,6 +29,7 @@ class ContentsList: ContentsListDelegate {
                     return
                 }else{
                     self.addContentData(contentData: contentData, userUid: userUid)
+                    tableView.reloadData()
                 }
             }
         }

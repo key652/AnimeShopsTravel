@@ -20,6 +20,7 @@ class TimeLineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: true)
         self.contentsListDelegate = contentsListModel
         self.userBlockDelegate = userBlockModel
         timeLineTableView.delegate = self
@@ -30,18 +31,23 @@ class TimeLineViewController: UIViewController {
     }
     
     
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        contentsListDelegate?.fetchContentsData()
-        timeLineTableView.reloadData()
+        contentsListDelegate?.fetchContentsData(tableView: timeLineTableView)
     }
     
     
     @objc private func blockButtonTaped(_ sender: BlockButton) {
-        userBlockDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid)
+        userBlockDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid, tableView: timeLineTableView)
     }
     
     
+    @IBAction func ContributionAction(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "Contribution") else { return }
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+
     
 }
 
@@ -73,13 +79,11 @@ extension TimeLineViewController: UITableViewDelegate, UITableViewDataSource {
         let contentImageView = cell.viewWithTag(5)as! UIImageView
         contentImageView.sd_setImage(with: URL(string: contentsArray[contentsArray.count - indexPath.row - 1].contentImage), completed: nil)
         
-        if myUid == contentsArray[contentsArray.count - indexPath.row - 1].uid {
-            let blockButton = cell.viewWithTag(6)as! BlockButton
-            blockButton.blockUid = contentsArray[contentsArray.count - indexPath.row - 1].uid
-            blockButton.addTarget(self, action: #selector(blockButtonTaped(_:)), for: .touchUpInside)
-        }
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 450
     }
     
     

@@ -6,7 +6,6 @@
 //  Copyright © 2020 yuma yada. All rights reserved.
 //
 
-import Foundation
 
 class Contents {
     var userName: String = ""
