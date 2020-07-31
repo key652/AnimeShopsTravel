@@ -12,7 +12,7 @@ protocol UserBlockDelegate: class {
 }
 
 class UserBlock: UserBlockDelegate {
-    private let contentList = ContentsList()
+    private let contentList = ContentsListModel()
     
     func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView) {
         let alert = UIAlertController(title: "ブロック", message: "このユーザーをブロックしますか？", preferredStyle: .actionSheet)

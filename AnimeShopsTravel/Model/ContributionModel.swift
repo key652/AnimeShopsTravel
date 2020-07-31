@@ -12,7 +12,7 @@ protocol ContributionDelegate: class {
     func sendContentData(userName: String,profileImageData: Data, contentImageData: Data, comment: String, uid: String, viewController: UIViewController)
 }
 
-class Contribution: ContributionDelegate {
+class ContributionModel: ContributionDelegate {
     private let alert = AlertCreateView()
     
 
@@ -22,33 +22,27 @@ class Contribution: ContributionDelegate {
         let storage = Storage.storage().reference(forURL: "gs://animeshopstravel-5e4c3.appspot.com")
         let profileImageRef = settingImageRef(DB: timeLineDB, storage: storage, child: "Users")
         let contentImageRef = settingImageRef(DB: timeLineDB, storage: storage, child: "Content")
-            let uploadTask = profileImageRef.putData(profileImageData, metadata: nil) {(metadata, error) in
+        _ = profileImageRef.putData(profileImageData, metadata: nil) {(metadata, error) in
                 if error != nil {
-                    self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
+                    self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
                     return
                 }
-            let uploadTask2 = contentImageRef.putData(contentImageData, metadata: nil) { (metadata, error) in
+                _ = contentImageRef.putData(contentImageData, metadata: nil) { (metadata, error) in
                 if error != nil {
-                    self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
+                    self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
                     return
                 }
                 profileImageRef.downloadURL { (profileImageUrl, error) in
                     if error != nil {
-                        self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
+                        self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
                         return
                     }
                     contentImageRef.downloadURL { (contentUrl, error) in
                         if error != nil {
-                            self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
+                            self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
                             return
                         }
-                        let timeLineInfo = ["userName": userName as Any,
-                                            "profileImage": profileImageUrl?.absoluteString as Any,
-                                            "contentImage": contentUrl?.absoluteString as Any,
-                                            "comment": comment as Any,
-                                            "createAt": ServerValue.timestamp() as! [String:Any],
-                                            "uid": uid as Any]
-                        timeLineDB.updateChildValues(timeLineInfo)
+                        self.updateChildValues(userName: userName, profileUrl: profileImageUrl!, contentUrl: contentUrl!, comment: comment, uid: uid, Database: timeLineDB)
                         viewController.navigationController?.popViewController(animated: true)
                     }
                 }
@@ -56,23 +50,15 @@ class Contribution: ContributionDelegate {
         }
     }
     
-    
-    // プロフィール画像と投稿画像をFirebaseのStorageに送ります
-    private func sendImageData(profileImageRef: StorageReference, contentImageRef: StorageReference,profileImageData: Data, contentImageData: Data, viewController: UIViewController) {
-        let uploadTask = profileImageRef.putData(profileImageData, metadata: nil) {(metadata, error) in
-            if error != nil {
-                self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
-                return
-            }
-        }
-        let uploadTask2 = contentImageRef.putData(contentImageData, metadata: nil) { (metadata, error) in
-            if error != nil {
-                self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
-                return
-            }
-        }
+    private func updateChildValues(userName:String, profileUrl:URL, contentUrl:URL, comment:String, uid: String, Database: DatabaseReference) {
+        let timeLineInfo = ["userName": userName as Any,
+                            "profileImage": profileUrl.absoluteString as Any,
+                            "contentImage": contentUrl.absoluteString as Any,
+                            "comment": comment as Any,
+                            "createAt": ServerValue.timestamp() as! [String:Any],
+                            "uid": uid as Any]
+        Database.updateChildValues(timeLineInfo)
     }
-    
     
     
     private func settingImageRef(DB: DatabaseReference, storage: StorageReference, child: String) -> StorageReference {
