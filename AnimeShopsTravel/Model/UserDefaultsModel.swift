@@ -7,14 +7,15 @@
 //
 import Foundation
 
-protocol GetUserDataDelegate: class {
+protocol UserDefaultsDelegate: class {
     func getProfileImageData() -> Data
     func getMyUserName() -> String
     func getMyUid() -> String
+    func removeLoginToken()
 }
 
 
-class GetUserData: GetUserDataDelegate {
+class UserDefaultsModel: UserDefaultsDelegate {
     func getProfileImageData() -> Data {
         var userprofileImageData: Data!
         if UserDefaults.standard.object(forKey: "profileImageData") != nil {
@@ -39,6 +40,14 @@ class GetUserData: GetUserDataDelegate {
         }
         let myUid = uid ?? ""
         return myUid
+    }
+    
+    func createLoginToken() {
+        UserDefaults.standard.set(true, forKey: "loginToken")
+    }
+    
+    func removeLoginToken() {
+        UserDefaults.standard.removeObject(forKey: "loginToken")
     }
     
     
