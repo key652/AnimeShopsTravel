@@ -9,6 +9,7 @@ import UIKit
 
 struct CustomColor {
     static let mainColor = UIColor(red: 0.27, green: 0.74, blue: 0.70, alpha: 1)
+    static let logoutButtonColor = UIColor(red: 0.92, green: 0.40, blue: 0.44, alpha: 1)
 }
 
 class BlockButton: UIButton {
