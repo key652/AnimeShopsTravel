@@ -13,7 +13,7 @@ protocol ContentsListDelegate: class {
     func fetchContentsData(tableView: UITableView)
 }
 
-class ContentsList: ContentsListDelegate {
+class ContentsListModel: ContentsListDelegate {
     private let ref = Database.database().reference()
     public var contentsArray = [Contents]()
     
