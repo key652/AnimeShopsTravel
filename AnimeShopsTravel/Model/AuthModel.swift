@@ -13,24 +13,23 @@ protocol AuthDelegate: class {
     func login(email: String, password: String, viewController: UIViewController)
     func resetPassword()
     func singup(email: String, password: String, name: String, viewController: UIViewController)
+    func logout(viewController: UIViewController)
 }
 
 
 
 class AuthModel: AuthDelegate {
     private let alert = AlertCreateView()
-    
+    private let userDefaultsModel = UserDefaultsModel()
     
     func login(email: String, password: String, viewController: UIViewController) {
-        if email == "" || password == "" {
-            alert.alertCreate(title: "入力されていない項目があります。", message: "", actionTitle: "OK", viewCotroller: viewController)
-        }
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                self.alert.alertCreate(title: "メールアドレスまたはパスワードが間違っています。", message: "", actionTitle: "OK", viewCotroller: viewController)
+                self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
             }else{
-                self.createLoginToken()
-                let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
+                self.userDefaultsModel.createLoginToken()
+                guard let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar") else
+                { return }
                 viewController.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
@@ -51,9 +50,18 @@ class AuthModel: AuthDelegate {
             return
         }else{
             createUser(email: email, password: password, name: name, viewController: viewController)
-            createLoginToken()
-            let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
+        }
+    }
+    
+    
+    func logout(viewController: UIViewController) {
+        do {
+            try Auth.auth().signOut()
+            userDefaultsModel.removeLoginToken()
+            let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "login")as! LoginViewController
             viewController.navigationController?.pushViewController(nextVC, animated: true)
+            } catch {
+                alert.alertCreate(title: "エラー", message: error.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
         }
     }
     
@@ -66,6 +74,9 @@ class AuthModel: AuthDelegate {
             }else{
                 guard let uid = Auth.auth().currentUser?.uid else { return }
                 self.UserDefalutSetData(uid: uid, name: name)
+                self.userDefaultsModel.createLoginToken()
+                let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
+                viewController.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
     }
@@ -78,12 +89,6 @@ class AuthModel: AuthDelegate {
         UserDefaults.standard.set(profileImageData, forKey: "profileImageData")
         UserDefaults.standard.set(uid, forKey: "uid")
         UserDefaults.standard.set(name, forKey: "userName")
-    }
-    
-    
-    //自動ログインで使用するトークンを作成します。(func login, func signup)
-    private func createLoginToken() {
-        UserDefaults.standard.set(true, forKey: "loginToken")
     }
     
 }
