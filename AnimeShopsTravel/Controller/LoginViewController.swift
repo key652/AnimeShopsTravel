@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     private let myView = LoginView()
     weak var authDelegate: AuthDelegate?
     private let authModel = AuthModel()
+    let alert = AlertCreateView()
     
 
     override func viewDidLoad() {
@@ -19,14 +21,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view = myView
         view.backgroundColor = UIColor.white
         view.sendSubviewToBack(view)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.navigationBar.barTintColor = CustomColor.mainColor
-        navigationItem.setHidesBackButton(true, animated: true)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self
         self.authDelegate = authModel
         buttonActionSet()
+        customNavigationBar()
+    }
+    
+    
+    @objc private func loginButtonTaped() {
+        guard let email = myView.addressTextField.text else { return }
+        guard let password = myView.passwordTextField.text else { return }
+        if email == "" || password == "" {
+            alert.alertCreate(title: "入力されていない項目があります", message: "", actionTitle: "OK", viewCotroller: self)
+        }else{
+           authDelegate?.login(email: email, password: password, viewController: self)
+        }
+    }
+    
+    
+    @objc private func signupButtonTaped() {
+        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "signup") else { return }
+        self.navigationController?.pushViewController(signupVC, animated: true)
+    }
+    
+    
+    @objc private func resetPasswordButtonTaped() {
+        authDelegate?.resetPassword()
+    }
+    
+    
+    private func customNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = CustomColor.mainColor
+        navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     
@@ -47,24 +76,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         myView.loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
         myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
         myView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordButtonTaped), for: .touchUpInside)
-    }
-    
-    
-    @objc private func loginButtonTaped() {
-        guard let email = myView.addressTextField.text else { return }
-        guard let password = myView.passwordTextField.text else { return }
-        authDelegate?.login(email: email, password: password, viewController: self)
-    }
-    
-    
-    @objc private func signupButtonTaped() {
-        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "signup") else { return }
-        self.navigationController?.pushViewController(signupVC, animated: true)
-    }
-    
-    
-    @objc private func resetPasswordButtonTaped() {
-        authDelegate?.resetPassword()
     }
 
 

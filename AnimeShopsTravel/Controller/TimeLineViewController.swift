@@ -12,8 +12,9 @@ import SDWebImage
 class TimeLineViewController: UIViewController {
     @IBOutlet weak var timeLineTableView: UITableView!
     private var myUid:String?
-    let contentsListModel = ContentsList()
-    let userBlockModel = UserBlock()
+    private let contentsListModel = ContentsListModel()
+    private let userBlockModel = UserBlock()
+    private let userDefalutsModel = UserDefaultsModel()
     weak var contentsListDelegate: ContentsListDelegate?
     weak var userBlockDelegate: UserBlockDelegate?
     
@@ -25,9 +26,7 @@ class TimeLineViewController: UIViewController {
         self.userBlockDelegate = userBlockModel
         timeLineTableView.delegate = self
         timeLineTableView.dataSource = self
-        if UserDefaults.standard.object(forKey: "uid") != nil {
-            myUid = UserDefaults.standard.object(forKey: "uid") as! String
-        }
+        myUid = userDefalutsModel.getMyUid()
     }
     
     
@@ -79,11 +78,19 @@ extension TimeLineViewController: UITableViewDelegate, UITableViewDataSource {
         let contentImageView = cell.viewWithTag(5)as! UIImageView
         contentImageView.sd_setImage(with: URL(string: contentsArray[contentsArray.count - indexPath.row - 1].contentImage), completed: nil)
         
+        let blockButton = cell.viewWithTag(6)as! BlockButton
+        if myUid == contentsArray[contentsArray.count - indexPath.row - 1].uid {
+            blockButton.isHidden = true
+        }else{
+            blockButton.blockUid = contentsArray[contentsArray.count - indexPath.row - 1].uid
+            blockButton.addTarget(self, action: #selector(blockButtonTaped(_:)), for: .touchUpInside)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 450
+        return 460
     }
     
     

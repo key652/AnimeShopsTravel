@@ -15,14 +15,14 @@ class ContributionViewController: UIViewController {
     private var myUid = String()
     private var contentImageData = Data()
     private var profileImageData = Data()
-    weak var getUserDataDelegate: GetUserDataDelegate?
     weak var contributionDelegate: ContributionDelegate?
-    let getUserDataModel = GetUserData()
-    let contributionModel = Contribution()
+    private let userDefaultsModel = UserDefaultsModel()
+    private let contributionModel = ContributionModel()
     private var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         myView.commentTextView.delegate = self
         navigationController?.setNavigationBarHidden(true, animated: true)
         view = myView
         view.backgroundColor = UIColor.white
@@ -38,12 +38,10 @@ class ContributionViewController: UIViewController {
     
     
     private func setUserData() {
-        self.getUserDataDelegate = getUserDataModel
-        self.getUserDataDelegate = getUserDataModel
-        myView.userNameLabel.text = getUserDataDelegate?.getMyUserName()
-        myView.profileImageView.image = UIImage(data: (getUserDataDelegate?.getProfileImageData())!)
-        myUid = getUserDataModel.getMyUid()
-        profileImageData = getUserDataDelegate?.getProfileImageData() as! Data
+        myView.userNameLabel.text = userDefaultsModel.getMyUserName()
+        profileImageData = userDefaultsModel.getProfileImageData()
+        myView.profileImageView.image = UIImage(data: profileImageData)
+        myUid = userDefaultsModel.getMyUid()
     }
     
     
@@ -53,18 +51,22 @@ class ContributionViewController: UIViewController {
         myView.cancelButton.addTarget(self, action: #selector(cancelButtonTaped), for: .touchUpInside)
     }
     
+    
     @objc private func contributionButtonTaped() {
         self.contributionDelegate = contributionModel
         contributionDelegate?.sendContentData(userName: myView.userNameLabel.text!, profileImageData: profileImageData, contentImageData: contentImageData, comment: myView.commentTextView.text, uid: myUid, viewController: self)
     }
     
+    
     @objc private func cameraButtonTaped() {
         showAlert()
     }
     
+    
     @objc private func cancelButtonTaped() {
         self.navigationController?.popViewController(animated: true)
     }
+    
     
 }
 
@@ -73,16 +75,16 @@ class ContributionViewController: UIViewController {
 extension ContributionViewController: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        myView.commentTextView.delegate = self
         let resultText: String = (textView.text as NSString).replacingCharacters(in: range, with: text)
-        if resultText.count <= 140 {
+        if resultText.count <= 120 {
             return true
         }
-        self.alert.alertCreate(title: "140文字までしか入力できません", message: "", actionTitle: "OK", viewCotroller: self)
+        self.alert.alertCreate(title: "120文字までしか入力できません", message: "", actionTitle: "OK", viewCotroller: self)
         return false
     }
     
 }
+
 
 
 extension ContributionViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate, CropViewControllerDelegate {
