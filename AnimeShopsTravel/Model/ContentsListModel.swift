@@ -11,6 +11,7 @@ import Firebase
 
 protocol ContentsListDelegate: class {
     func fetchContentsData(tableView: UITableView)
+    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView)
 }
 
 class ContentsListModel: ContentsListDelegate {
@@ -19,20 +20,31 @@ class ContentsListModel: ContentsListDelegate {
     
     
     func fetchContentsData(tableView: UITableView) {
-        ref.child("timeLine").queryOrdered(byChild: "createAt").observe(.value) { (snapshots) in
+        let ref = Database.database().reference().child("timeLine").queryOrdered(byChild: "createAt").observe(.value) { (snapshots) in
             self.contentsArray.removeAll()
             let snapshot = snapshots.children.allObjects as! [DataSnapshot]
             for snap in snapshot {
                 guard let contentData = snap.value as? [String:Any] else { return }
-                let userUid = contentData["uid"]as! String
-                if UserDefaults.standard.object(forKey: "\(userUid)") != nil {
-                    return
+                let userUid = contentData["uid"]as? String
+                if UserDefaults.standard.object(forKey: "\(userUid!)") != nil {
                 }else{
-                    self.addContentData(contentData: contentData, userUid: userUid)
+                    self.addContentData(contentData: contentData, userUid: userUid!)
                     tableView.reloadData()
                 }
             }
         }
+    }
+    
+    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView) {
+        let alert = UIAlertController(title: "ブロック", message: "このユーザーをブロックしますか？", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "ブロックする", style: .default) { (alert) in
+                UserDefaults.standard.set(blockUid, forKey: "\(blockUid)")
+                self.fetchContentsData(tableView: tableView)
+        }
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alert.addAction(action)
+        alert.addAction(cancelAction)
+        viewController.present(alert, animated: true, completion: nil)
     }
     
     
