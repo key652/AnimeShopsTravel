@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
     private let myView = LoginView()
     weak var authDelegate: AuthDelegate?
     private let authModel = AuthModel()
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @objc private func resetPasswordButtonTaped() {
-        authDelegate?.resetPassword()
+        authDelegate?.resetPassword(viewController: self)
     }
     
     
@@ -65,18 +65,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        myView.addressTextField.resignFirstResponder()
-        myView.passwordTextField.resignFirstResponder()
-        return true
-    }
-    
-    
     private func buttonActionSet() {
         myView.loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
         myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
         myView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordButtonTaped), for: .touchUpInside)
     }
 
+    
+}
 
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        myView.addressTextField.resignFirstResponder()
+        myView.passwordTextField.resignFirstResponder()
+        return true
+    }
 }

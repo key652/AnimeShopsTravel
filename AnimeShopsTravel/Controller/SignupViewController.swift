@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignupViewController: UIViewController, UITextFieldDelegate{
+class SignupViewController: UIViewController {
     private let myView = SignupView()
     private let authModel = AuthModel()
     weak var authDelegate:AuthDelegate?
@@ -25,6 +25,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         self.authDelegate = authModel
         ButtonActionSet()
     }
+
+    
+    @objc private func signupButtonTaped() {
+        guard let userName = myView.nameTextField.text else { return }
+        guard let email = myView.addressTextField.text else { return }
+        guard let password = myView.passwordTextField.text else { return }
+        authDelegate?.singup(email: email, password: password, name: userName, viewController: self)
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -34,6 +42,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
     }
     
     
+    private func ButtonActionSet() {
+        myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
+    }
+
+}
+
+extension SignupViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         myView.nameTextField.resignFirstResponder()
         myView.addressTextField.resignFirstResponder()
@@ -41,18 +57,4 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    
-    private func ButtonActionSet() {
-        myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
-    }
-    
-    
-    @objc private func signupButtonTaped() {
-        guard let userName = myView.nameTextField.text else { return }
-        guard let email = myView.addressTextField.text else { return }
-        guard let password = myView.passwordTextField.text else { return }
-        authDelegate?.singup(email: email, password: password, name: userName, viewController: self)
-    }
-
-
 }

@@ -15,34 +15,27 @@ class SettingViewController: UIViewController {
     private let userDefaultsModel = UserDefaultsModel()
     private let authModel = AuthModel()
     weak var authDelegate: AuthDelegate?
+    weak var userDefaultsDelegate: UserDefaultsDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = myView
         view.backgroundColor = UIColor.white
         view.sendSubviewToBack(view)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setButtonAction()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setProfileData()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        myView.profileImageView.backgroundColor = UIColor.red
         myView.profileImageView.layer.masksToBounds = false
         myView.profileImageView.layer.cornerRadius = myView.profileImageView.frame.width / 2.0
         myView.profileImageView.clipsToBounds = true
-    }
-    
-    
-    private func setProfileData() {
-        myView.userNameLabel.text = userDefaultsModel.getMyUserName()
-        let profileImageData:Data = userDefaultsModel.getProfileImageData()
-        myView.profileImageView.image = UIImage(data: profileImageData)
-    }
-    
-    
-    private func setButtonAction() {
-        myView.settingProfileButton.addTarget(self, action: #selector(settingProfileButtonTaped), for: .touchUpInside)
-        myView.logoutButton.addTarget(self, action: #selector(logoutButtonTaped), for: .touchUpInside)
     }
     
     
@@ -58,12 +51,25 @@ class SettingViewController: UIViewController {
         let logoutAction = UIAlertAction(title: "ログアウト", style: .default) { (alert) in
             self.authDelegate?.logout(viewController: self)
         }
-        let cancel = UIAlertAction(title: "ログアウト", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         logoutAlert.addAction(logoutAction)
         logoutAlert.addAction(cancel)
         self.present(logoutAlert, animated: true, completion: nil)
     }
     
+    
+    private func setProfileData() {
+        self.userDefaultsDelegate = userDefaultsModel
+        myView.userNameLabel.text = userDefaultsDelegate?.getMyUserName()
+        let profileImageData:Data = (userDefaultsDelegate?.getProfileImageData())!
+        myView.profileImageView.image = UIImage(data: profileImageData)
+    }
+    
+    
+    private func setButtonAction() {
+        myView.settingProfileButton.addTarget(self, action: #selector(settingProfileButtonTaped), for: .touchUpInside)
+        myView.logoutButton.addTarget(self, action: #selector(logoutButtonTaped), for: .touchUpInside)
+    }
 
 
 }

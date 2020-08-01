@@ -13,6 +13,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: true)
+        navigationController?.navigationBar.barTintColor = CustomColor.mainColor
+        tabBar.barTintColor = CustomColor.mainColor
     }
     
 

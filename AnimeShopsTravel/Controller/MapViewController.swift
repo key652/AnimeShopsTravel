@@ -21,11 +21,13 @@ class MapViewController: UIViewController {
         view.sendSubviewToBack(myView.mapView)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
         
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -50,9 +52,11 @@ extension MapViewController: MKMapViewDelegate {
         myView.mapView.userTrackingMode = .follow
     }
     
+    
     private func trackingButtonActionSet() {
         myView.trackingButton.addTarget(self, action: #selector(trackingButtonTaped), for: .touchUpInside)
     }
+    
     
     @objc func trackingButtonTaped() {
         switch myView.mapView.userTrackingMode{
@@ -74,6 +78,7 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    
      func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
@@ -83,6 +88,7 @@ extension MapViewController: MKMapViewDelegate {
         pinView.rightCalloutAccessoryView = myView.pinButton
         return pinView
     }
+    
     
     private func settingShopPins() {
         for i in 0...ShopPinsData.nameDataArray.count - 1 {
@@ -95,6 +101,7 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let title = view.annotation?.title else { return }
         if control != view.rightCalloutAccessoryView {
@@ -103,11 +110,12 @@ extension MapViewController: MKMapViewDelegate {
         for i in 0...ShopPinsData.nameDataArray.count - 1 {
             if title == ShopPinsData.nameDataArray[i] {
                 let webVC = self.storyboard?.instantiateViewController(withIdentifier: "web")as! WebViewController
-                webVC.ShopUrl = ShopPinsData.urlArray[i]
+                webVC.shopUrl = ShopPinsData.urlArray[i]
                 self.present(webVC, animated: true, completion: nil)
             }
         }
     }
+    
     
 }
 
@@ -125,6 +133,7 @@ extension MapViewController: CLLocationManagerDelegate {
             }
         }
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if myView.mapView.userTrackingMode == .none{

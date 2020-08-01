@@ -16,19 +16,49 @@ class ContributionViewController: UIViewController {
     private var contentImageData = Data()
     private var profileImageData = Data()
     weak var contributionDelegate: ContributionDelegate?
+    weak var userDefaultsDelegate: UserDefaultsDelegate?
     private let userDefaultsModel = UserDefaultsModel()
     private let contributionModel = ContributionModel()
     private var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         myView.commentTextView.delegate = self
+        myView.commentTextView.delegate = self
+        self.userDefaultsDelegate = userDefaultsModel
         navigationController?.setNavigationBarHidden(true, animated: true)
         view = myView
         view.backgroundColor = UIColor.white
         view.sendSubviewToBack(view)
         setUserData()
         setButtonAction()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        indicatorSet()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        myView.profileImageView.layer.masksToBounds = false
+        myView.profileImageView.layer.cornerRadius = myView.profileImageView.frame.width / 2.0
+        myView.profileImageView.clipsToBounds = true
+    }
+    
+    
+    @objc private func contributionButtonTaped() {
+        self.contributionDelegate = contributionModel
+        contributionDelegate?.sendContentData(userName: myView.userNameLabel.text!, profileImageData: profileImageData, contentImageData: contentImageData, comment: myView.commentTextView.text, uid: myUid, viewController: self, indicator: indicator)
+    }
+    
+    
+    @objc private func cameraButtonTaped() {
+        selectContentImage()
+    }
+
+    
+    @objc private func cancelButtonTaped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -38,10 +68,10 @@ class ContributionViewController: UIViewController {
     
     
     private func setUserData() {
-        myView.userNameLabel.text = userDefaultsModel.getMyUserName()
-        profileImageData = userDefaultsModel.getProfileImageData()
+        myView.userNameLabel.text = userDefaultsDelegate?.getMyUserName()
+        profileImageData = userDefaultsDelegate?.getProfileImageData() as! Data
         myView.profileImageView.image = UIImage(data: profileImageData)
-        myUid = userDefaultsModel.getMyUid()
+        myUid = userDefaultsDelegate?.getMyUid() as! String
     }
     
     
@@ -51,22 +81,13 @@ class ContributionViewController: UIViewController {
         myView.cancelButton.addTarget(self, action: #selector(cancelButtonTaped), for: .touchUpInside)
     }
     
-    
-    @objc private func contributionButtonTaped() {
-        self.contributionDelegate = contributionModel
-        contributionDelegate?.sendContentData(userName: myView.userNameLabel.text!, profileImageData: profileImageData, contentImageData: contentImageData, comment: myView.commentTextView.text, uid: myUid, viewController: self)
+    private func indicatorSet() {
+        indicator.style = .large
+        indicator.color = UIColor.black
+        indicator.center = view.center
+        view.addSubview(indicator)
     }
-    
-    
-    @objc private func cameraButtonTaped() {
-        showAlert()
-    }
-    
-    
-    @objc private func cancelButtonTaped() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     
 }
 
@@ -142,7 +163,7 @@ extension ContributionViewController: UIImagePickerControllerDelegate,UINavigati
     }
     
     
-    func showAlert(){
+    func selectContentImage(){
          let alertController = UIAlertController(title: "選択", message: "どちらを使用しますか?", preferredStyle: .actionSheet)
          let camera = UIAlertAction(title: "カメラ", style: .default) { (alert) in
              self.doCamera()
