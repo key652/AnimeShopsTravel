@@ -44,7 +44,12 @@ class SettingView: UIView {
         settingProfileButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         logoutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         
+        settingProfileButton.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        settingProfileButton.layer.shadowColor = UIColor.black.cgColor
+        settingProfileButton.layer.shadowOpacity = 0.6
+        
     }
+    
     
     private func setLayout() {
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -71,5 +76,6 @@ class SettingView: UIView {
         logoutButton.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         logoutButton.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         logoutButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        
     }
 }

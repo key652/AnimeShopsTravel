@@ -29,7 +29,7 @@ class TopView: UIView {
         topImage.image = UIImage(named: "Icon")
         titleLabel.text = "アニメショップ巡り"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 36)
-        titleLabel.tintColor = UIColor.white
+        titleLabel.textColor = UIColor.white
         titleLabel.textAlignment = NSTextAlignment.center
         
     }
