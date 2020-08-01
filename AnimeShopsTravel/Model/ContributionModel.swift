@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 protocol ContributionDelegate: class {
-    func sendContentData(userName: String,profileImageData: Data, contentImageData: Data, comment: String, uid: String, viewController: UIViewController)
+    func sendContentData(userName: String,profileImageData: Data, contentImageData: Data, comment: String, uid: String, viewController: UIViewController, indicator: UIActivityIndicatorView)
 }
 
 class ContributionModel: ContributionDelegate {
@@ -17,7 +17,8 @@ class ContributionModel: ContributionDelegate {
     
 
     
-    func sendContentData(userName: String, profileImageData: Data, contentImageData: Data, comment: String, uid: String, viewController: UIViewController) {
+    func sendContentData(userName: String, profileImageData: Data, contentImageData: Data, comment: String, uid: String, viewController: UIViewController, indicator: UIActivityIndicatorView) {
+        indicator.startAnimating()
         let timeLineDB = Database.database().reference().child("timeLine").childByAutoId()
         let storage = Storage.storage().reference(forURL: "gs://animeshopstravel-5e4c3.appspot.com")
         let profileImageRef = settingImageRef(DB: timeLineDB, storage: storage, child: "Users")
@@ -43,6 +44,7 @@ class ContributionModel: ContributionDelegate {
                             return
                         }
                         self.updateChildValues(userName: userName, profileUrl: profileImageUrl!, contentUrl: contentUrl!, comment: comment, uid: uid, Database: timeLineDB)
+                        indicator.stopAnimating()
                         viewController.navigationController?.popViewController(animated: true)
                     }
                 }
