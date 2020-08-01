@@ -21,13 +21,8 @@ class TopViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            if UserDefaults.standard.object(forKey: "loginToken") != nil {
-                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
-                self.navigationController?.pushViewController(nextVC, animated: true)
-            }else{
-                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "login")as! LoginViewController
-                self.navigationController?.pushViewController(nextVC, animated: true)
-            }
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "login") else { return }
+            self.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
     
