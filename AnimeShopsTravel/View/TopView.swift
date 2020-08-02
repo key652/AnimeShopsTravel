@@ -41,7 +41,7 @@ class TopView: UIView {
         topImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -50).isActive = true
         topImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 66).isActive = true
         topImage.rightAnchor.constraint(equalTo: rightAnchor, constant: -66).isActive = true
-        topImage.heightAnchor.constraint(equalToConstant: 185).isActive = true
+        topImage.heightAnchor.constraint(equalTo: topImage.widthAnchor, constant: -50).isActive = true
         titleLabel.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: 24).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
