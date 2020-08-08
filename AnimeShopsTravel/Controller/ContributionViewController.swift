@@ -27,7 +27,7 @@ class ContributionViewController: UIViewController {
         self.userDefaultsDelegate = userDefaultsModel
         navigationController?.setNavigationBarHidden(true, animated: true)
         view = myView
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
         view.sendSubviewToBack(view)
         setUserData()
         setButtonAction()
@@ -116,6 +116,9 @@ extension ContributionViewController: UIImagePickerControllerDelegate,UINavigati
         let cropController = CropViewController(croppingStyle: .default, image: contentImage)
         cropController.delegate = self
         cropController.customAspectRatio = myView.contentImageView.frame.size
+        cropController.aspectRatioPickerButtonHidden = true
+        cropController.rotateButtonsHidden = true
+        cropController.resetButtonHidden = true
         picker.dismiss(animated: true) {
             self.present(cropController, animated: true, completion: nil)
         }
