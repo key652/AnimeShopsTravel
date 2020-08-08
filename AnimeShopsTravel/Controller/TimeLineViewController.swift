@@ -100,6 +100,9 @@ extension TimeLineViewController: UITableViewDelegate, UITableViewDataSource {
         return 460
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        timeLineTableView.deselectRow(at: indexPath, animated: true)
+    }
     
     
 }
