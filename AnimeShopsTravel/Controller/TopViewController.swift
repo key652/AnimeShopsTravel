@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TopViewController: UIViewController {
     private let myView = TopView()
@@ -21,11 +22,15 @@ class TopViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "login") else { return }
-            self.navigationController?.pushViewController(nextVC, animated: true)
+            if Auth.auth().currentUser != nil {
+                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") else { return }
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }else{
+                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "login") else { return }
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
         }
     }
-    
     
 
 }
