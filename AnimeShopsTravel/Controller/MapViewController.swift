@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
-    
+    private var isFirst = false
     private let myView = MapView()
     private let customColor = CustomColor.mainColor
     
@@ -25,14 +25,19 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
-        
     }
     
+    override func viewDidLayoutSubviews() {
+        if !isFirst {
+            isFirst = true
+            initMap()
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         myView.mapView.delegate = self
-        initMap()
+        //initMap()
         setupLocationManager()
         settingShopPins()
         trackingButtonActionSet()
