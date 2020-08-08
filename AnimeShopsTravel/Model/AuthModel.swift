@@ -20,15 +20,13 @@ protocol AuthDelegate: class {
 
 class AuthModel: AuthDelegate {
     private let alert = AlertCreateView()
-    private let userDefaultsModel = UserDefaultsModel()
     
     
     func login(email: String, password: String, viewController: UIViewController) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
+                self.alert.alertCreate(title: "メールアドレスまたはパスワードが間違っています", message: "", actionTitle: "OK", viewCotroller: viewController)
             }else{
-                self.userDefaultsModel.createLoginToken()
                 guard let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar") else
                 { return }
                 viewController.navigationController?.pushViewController(nextVC, animated: true)
@@ -67,7 +65,6 @@ class AuthModel: AuthDelegate {
     func logout(viewController: UIViewController) {
         do {
             try Auth.auth().signOut()
-            userDefaultsModel.removeLoginToken()
             let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "login")as! LoginViewController
             viewController.navigationController?.pushViewController(nextVC, animated: true)
             } catch {
@@ -80,11 +77,10 @@ class AuthModel: AuthDelegate {
     private func createUser(email: String, password: String, name: String, viewController: UIViewController) {
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                self.alert.alertCreate(title: "エラー", message: "\(String(describing: error))", actionTitle: "OK", viewCotroller: viewController)
+                self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller: viewController)
             }else{
-                guard let uid = Auth.auth().currentUser?.uid else { return }
-                self.UserDefalutSetData(uid: uid, name: name)
-                self.userDefaultsModel.createLoginToken()
+                self.setProfileData(name: name, viewController: viewController)
+                self.setProfileImageData()
                 let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar")as! TabBarViewController
                 viewController.navigationController?.pushViewController(nextVC, animated: true)
             }
@@ -92,16 +88,22 @@ class AuthModel: AuthDelegate {
     }
     
     
-    //プロフィール初期画像とユーザーIDをUserDefalutに保存します。(func signup)
-    private func UserDefalutSetData(uid: String, name: String) {
+   private func setProfileImageData() {
         UserDefaults.standard.removeObject(forKey: "profileImageData")
-        UserDefaults.standard.removeObject(forKey: "userName")
-        UserDefaults.standard.removeObject(forKey: "uid")
         guard let profileImage = UIImage(named: "noimage") else { return }
         guard let profileImageData = profileImage.jpegData(compressionQuality: 0.1) else { return }
         UserDefaults.standard.set(profileImageData, forKey: "profileImageData")
-        UserDefaults.standard.set(uid, forKey: "uid")
-        UserDefaults.standard.set(name, forKey: "userName")
+    }
+    
+    
+    private func setProfileData(name: String, viewController: UIViewController) {
+        let user = Auth.auth().currentUser?.createProfileChangeRequest()
+        user?.displayName = name
+        user?.commitChanges(completion: { (error) in
+            if error != nil {
+                self.alert.alertCreate(title: "エラー", message: error!.localizedDescription, actionTitle: "OK", viewCotroller:viewController)
+            }
+        })
     }
     
     

@@ -8,12 +8,12 @@
 
 import UIKit
 import SDWebImage
+import Firebase
 
 class TimeLineViewController: UIViewController {
     @IBOutlet weak var timeLineTableView: UITableView!
     private var myUid:String?
     private let contentsListModel = ContentsListModel()
-    private let userDefalutsModel = UserDefaultsModel()
     weak var contentsListDelegate: ContentsListDelegate?
     private var indicator = UIActivityIndicatorView()
     private let alert = AlertCreateView()
@@ -32,7 +32,7 @@ class TimeLineViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        myUid = userDefalutsModel.getMyUid()
+        setMyUid()
         contentsListDelegate?.fetchContentsData(tableView: timeLineTableView)
     }
     
@@ -51,11 +51,18 @@ class TimeLineViewController: UIViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    
     private func indicatorSet() {
         indicator.center = view.center
         indicator.style = .large
         indicator.color = UIColor.black
         view.addSubview(indicator)
+    }
+    
+    
+    private func setMyUid() {
+        let user = Auth.auth().currentUser
+        myUid = user?.uid
     }
     
 }

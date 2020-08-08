@@ -12,10 +12,10 @@ import Firebase
 class SettingViewController: UIViewController {
     private let myView = SettingView()
     private var profileImageData = Data()
-    private let userDefaultsModel = UserDefaultsModel()
     private let authModel = AuthModel()
     weak var authDelegate: AuthDelegate?
-    weak var userDefaultsDelegate: UserDefaultsDelegate?
+    private let profileDataModel = ProfileDataModel()
+    weak var profileDataDelegate: ProfileDataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +59,10 @@ class SettingViewController: UIViewController {
     
     
     private func setProfileData() {
-        self.userDefaultsDelegate = userDefaultsModel
-        myView.userNameLabel.text = userDefaultsDelegate?.getMyUserName()
-        let profileImageData:Data = (userDefaultsDelegate?.getProfileImageData())!
+        let user = Auth.auth().currentUser
+        self.profileDataDelegate = profileDataModel
+        myView.userNameLabel.text = user?.displayName
+        let profileImageData:Data = (profileDataDelegate?.getMyProfileImage())!
         myView.profileImageView.image = UIImage(data: profileImageData)
     }
     

@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import Firebase
 import CropViewController
 
 class ProfileViewController: UIViewController {
     private let myView = ProfileView()
-    private let userDefaultsModel = UserDefaultsModel()
     private var profileImageData: Data!
-    weak var userDefaultsDelegate: UserDefaultsDelegate?
+    private let profileDataModel = ProfileDataModel()
+    weak var profileDataDelegate: ProfileDataDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = myView
         view.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
         view.sendSubviewToBack(view)
+        self.profileDataDelegate = profileDataModel
         myView.userNameTextField.delegate = self
-        self.userDefaultsDelegate = userDefaultsModel
         setProfileData()
         myView.changeProfileButton.addTarget(self, action: #selector(changeProfileButtonTaped), for: .touchUpInside)
         addGesture()
@@ -38,7 +40,7 @@ class ProfileViewController: UIViewController {
     
     @objc private func changeProfileButtonTaped() {
         guard let userName = myView.userNameTextField.text else { return }
-        userDefaultsDelegate?.changeProfileData(userName: userName, profileImageData: profileImageData, viewController: self)
+        profileDataDelegate?.changeProfileData(name: userName, profileImageData: profileImageData, viewController: self)
     }
     
     
@@ -53,16 +55,19 @@ class ProfileViewController: UIViewController {
     
     
     private func setProfileData() {
-        myView.userNameTextField.text = userDefaultsDelegate?.getMyUserName()
-        profileImageData = userDefaultsDelegate?.getProfileImageData()
+        let user = Auth.auth().currentUser
+        myView.userNameTextField.text = user?.displayName
+        profileImageData = profileDataDelegate?.getMyProfileImage()
         myView.profileImageView.image = UIImage(data: profileImageData)
     }
+    
     
     private func addGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(profileImageViewTaped))
         myView.profileImageView.addGestureRecognizer(tap)
         myView.profileImageView.isUserInteractionEnabled = true
     }
+    
     
     private func setUpNotificationForButton() {
         let notificationCenter = NotificationCenter.default

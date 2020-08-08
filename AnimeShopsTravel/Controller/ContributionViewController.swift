@@ -7,24 +7,25 @@
 //
 
 import UIKit
+import Firebase
 import CropViewController
 
 class ContributionViewController: UIViewController {
     private let alert = AlertCreateView()
     private let myView = ContributionView()
-    private var myUid = String()
+    private var myUid: String!
     private var contentImageData = Data()
     private var profileImageData = Data()
     weak var contributionDelegate: ContributionDelegate?
-    weak var userDefaultsDelegate: UserDefaultsDelegate?
-    private let userDefaultsModel = UserDefaultsModel()
     private let contributionModel = ContributionModel()
+    weak var profileDataDelegate: ProfileDataDelegate?
+    private let profileDataModel = ProfileDataModel()
     private var indicator = UIActivityIndicatorView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myView.commentTextView.delegate = self
-        self.userDefaultsDelegate = userDefaultsModel
         navigationController?.setNavigationBarHidden(true, animated: true)
         view = myView
         view.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
@@ -68,10 +69,12 @@ class ContributionViewController: UIViewController {
     
     
     private func setUserData() {
-        myView.userNameLabel.text = userDefaultsDelegate?.getMyUserName()
-        profileImageData = userDefaultsDelegate?.getProfileImageData() as! Data
+        self.profileDataDelegate = profileDataModel
+        let user = Auth.auth().currentUser
+        profileImageData = profileDataDelegate?.getMyProfileImage() as! Data
         myView.profileImageView.image = UIImage(data: profileImageData)
-        myUid = userDefaultsDelegate?.getMyUid() as! String
+        myView.userNameLabel.text = user?.displayName
+        myUid = user?.uid
     }
     
     
