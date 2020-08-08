@@ -31,7 +31,7 @@ class SettingView: UIView {
         addSubview(logoutButton)
         
         userNameLabel.textAlignment = .center
-        settingProfileButton.setTitle("変更", for: .normal)
+        settingProfileButton.setTitle("プロフィール設定", for: .normal)
         logoutButton.setTitle("ログアウト", for: .normal)
         
         settingProfileButton.setTitleColor(UIColor.black, for: .normal)
