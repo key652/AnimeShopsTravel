@@ -18,12 +18,12 @@
 		EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */; };
 		EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7724C3438C00F6111F /* Assets.xcassets */; };
 		EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */; };
-		EA4F8F3624CC6BDA0096E9EE /* UserBlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3524CC6BDA0096E9EE /* UserBlockModel.swift */; };
+		EA4E61C324D5A5600061892D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E61C224D5A5600061892D /* ShopViewController.swift */; };
 		EA4F8F3824CC6C080096E9EE /* ContentsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */; };
 		EA4F8F3A24CC75C80096E9EE /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3924CC75C80096E9EE /* ContributionView.swift */; };
 		EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */; };
 		EA4F8F3F24CCA6CB0096E9EE /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */; };
-		EA4F8F4324CD46990096E9EE /* GetUserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F4224CD46990096E9EE /* GetUserDataModel.swift */; };
+		EA4F8F4324CD46990096E9EE /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */; };
 		EA4F8F4924CD8FF80096E9EE /* GoogleService-Info-9.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */; };
 		EA4F8F4B24CD91770096E9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */; };
 		EA529B3C24CB2C1000C53E1A /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA529B3B24CB2C1000C53E1A /* Contents.swift */; };
@@ -33,6 +33,9 @@
 		EA53BE3B24C9E91A0078669E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3A24C9E91A0078669E /* LoginViewController.swift */; };
 		EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3C24CA709B0078669E /* AuthModel.swift */; };
 		EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */; };
+		EA54A8A924CF03AE005CDD27 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54A8A824CF03AE005CDD27 /* SettingView.swift */; };
+		EA54A8AB24CF09CA005CDD27 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54A8AA24CF09CA005CDD27 /* SettingViewController.swift */; };
+		EA55700924D1A97300C86DE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55700824D1A97300C86DE3 /* ProfileViewController.swift */; };
 		EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57918224C42B2000BED8B7 /* WebViewController.swift */; };
 		EA5B132624CAA3F700239073 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132524CAA3F700239073 /* SignupView.swift */; };
 		EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132724CAAC1200239073 /* SignupViewController.swift */; };
@@ -41,6 +44,7 @@
 		EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132F24CB07D200239073 /* AreaShopsData.swift */; };
 		EA5B133324CB0F8900239073 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133224CB0F8900239073 /* WebView.swift */; };
 		EA5B133624CB11B100239073 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133524CB11B100239073 /* TimeLineViewController.swift */; };
+		EA85619D24D406AA004B4C92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85619C24D406AA004B4C92 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +63,12 @@
 		EA243A7724C3438C00F6111F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA243A7A24C3438C00F6111F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA243A7C24C3438C00F6111F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA4F8F3524CC6BDA0096E9EE /* UserBlockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBlockModel.swift; sourceTree = "<group>"; };
+		EA4E61C224D5A5600061892D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsListModel.swift; sourceTree = "<group>"; };
 		EA4F8F3924CC75C80096E9EE /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
 		EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionModel.swift; sourceTree = "<group>"; };
-		EA4F8F4224CD46990096E9EE /* GetUserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataModel.swift; sourceTree = "<group>"; };
+		EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-9.plist"; sourceTree = "<group>"; };
 		EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA529B3B24CB2C1000C53E1A /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
@@ -74,6 +78,9 @@
 		EA53BE3A24C9E91A0078669E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA53BE3C24CA709B0078669E /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreateView.swift; sourceTree = "<group>"; };
+		EA54A8A824CF03AE005CDD27 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		EA54A8AA24CF09CA005CDD27 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EA55700824D1A97300C86DE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EA57918224C42B2000BED8B7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EA5B132524CAA3F700239073 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		EA5B132724CAAC1200239073 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 		EA5B132F24CB07D200239073 /* AreaShopsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaShopsData.swift; sourceTree = "<group>"; };
 		EA5B133224CB0F8900239073 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EA5B133524CB11B100239073 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		EA85619C24D406AA004B4C92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +152,8 @@
 				EA243A7724C3438C00F6111F /* Assets.xcassets */,
 				EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */,
 				EA243A7C24C3438C00F6111F /* Info.plist */,
-				EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */,
 				EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */,
+				EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */,
 				EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */,
 			);
 			path = AnimeShopsTravel;
@@ -154,12 +162,14 @@
 		EA243A8224C343DB00F6111F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA17D83824C346CF008E65C8 /* MapView.swift */,
 				EA53BE3224C9CEB30078669E /* TopView.swift */,
 				EA53BE3824C9D8CA0078669E /* LoginView.swift */,
 				EA5B132524CAA3F700239073 /* SignupView.swift */,
+				EA17D83824C346CF008E65C8 /* MapView.swift */,
 				EA5B133224CB0F8900239073 /* WebView.swift */,
 				EA4F8F3924CC75C80096E9EE /* ContributionView.swift */,
+				EA54A8A824CF03AE005CDD27 /* SettingView.swift */,
+				EA85619C24D406AA004B4C92 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,9 +183,12 @@
 				EA5B132B24CAF24B00239073 /* TabBarViewController.swift */,
 				EA17D83624C34604008E65C8 /* MapViewController.swift */,
 				EA5B132D24CB00D800239073 /* AreaViewController.swift */,
+				EA4E61C224D5A5600061892D /* ShopViewController.swift */,
 				EA57918224C42B2000BED8B7 /* WebViewController.swift */,
 				EA5B133524CB11B100239073 /* TimeLineViewController.swift */,
 				EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */,
+				EA54A8AA24CF09CA005CDD27 /* SettingViewController.swift */,
+				EA55700824D1A97300C86DE3 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,8 +199,7 @@
 				EA17D83C24C36C2C008E65C8 /* CustomColor.swift */,
 				EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */,
 				EA529B3B24CB2C1000C53E1A /* Contents.swift */,
-				EA4F8F4224CD46990096E9EE /* GetUserDataModel.swift */,
-				EA4F8F3524CC6BDA0096E9EE /* UserBlockModel.swift */,
+				EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */,
 				EA53BE3C24CA709B0078669E /* AuthModel.swift */,
 				EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */,
 				EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */,
@@ -323,15 +335,18 @@
 			files = (
 				EA53BE3B24C9E91A0078669E /* LoginViewController.swift in Sources */,
 				EA5B133324CB0F8900239073 /* WebView.swift in Sources */,
+				EA4E61C324D5A5600061892D /* ShopViewController.swift in Sources */,
 				EA5B133624CB11B100239073 /* TimeLineViewController.swift in Sources */,
 				EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */,
 				EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */,
+				EA54A8AB24CF09CA005CDD27 /* SettingViewController.swift in Sources */,
 				EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */,
 				EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */,
 				EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */,
 				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
 				EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */,
 				EA5B132E24CB00D800239073 /* AreaViewController.swift in Sources */,
+				EA55700924D1A97300C86DE3 /* ProfileViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
 				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
 				EA5B132C24CAF24B00239073 /* TabBarViewController.swift in Sources */,
@@ -342,12 +357,13 @@
 				EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */,
 				EA53BE3324C9CEB30078669E /* TopView.swift in Sources */,
 				EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */,
-				EA4F8F3624CC6BDA0096E9EE /* UserBlockModel.swift in Sources */,
+				EA85619D24D406AA004B4C92 /* ProfileView.swift in Sources */,
 				EA4F8F3A24CC75C80096E9EE /* ContributionView.swift in Sources */,
 				EA4F8F3F24CCA6CB0096E9EE /* ContributionModel.swift in Sources */,
 				EA529B3C24CB2C1000C53E1A /* Contents.swift in Sources */,
 				EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */,
-				EA4F8F4324CD46990096E9EE /* GetUserDataModel.swift in Sources */,
+				EA4F8F4324CD46990096E9EE /* UserDefaultsModel.swift in Sources */,
+				EA54A8A924CF03AE005CDD27 /* SettingView.swift in Sources */,
 				EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -93,6 +93,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -151,6 +152,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -253,6 +255,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-Nd-FFD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeLineCell" rowHeight="469" id="rQF-Sw-XKv">
                                         <rect key="frame" x="0.0" y="28" width="414" height="469"/>
@@ -329,17 +332,18 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="vGk-rP-1Dn" secondAttribute="trailing" constant="4" id="zgw-oS-TmQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-EX-opX">
-                                <rect key="frame" x="350" y="750" width="55" height="55"/>
+                                <rect key="frame" x="350" y="750" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.27104646049999997" green="0.72344939720000001" blue="0.69729397729999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="EVG-wc-U2L"/>
-                                    <constraint firstAttribute="height" constant="55" id="qYk-lW-4M0"/>
+                                    <constraint firstAttribute="width" constant="50" id="gDY-BC-Oxb"/>
+                                    <constraint firstAttribute="height" constant="50" id="gM2-yd-V4T"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="投稿">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -351,11 +355,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dSe-Nd-FFD" firstAttribute="top" secondItem="mlx-05-0tO" secondAttribute="top" id="EmE-Ak-Q8v"/>
+                            <constraint firstItem="mlx-05-0tO" firstAttribute="bottom" secondItem="5R7-EX-opX" secondAttribute="bottom" constant="13" id="GnK-A6-DU8"/>
                             <constraint firstItem="dSe-Nd-FFD" firstAttribute="trailing" secondItem="mlx-05-0tO" secondAttribute="trailing" id="NuF-iq-KGY"/>
                             <constraint firstItem="dSe-Nd-FFD" firstAttribute="leading" secondItem="mlx-05-0tO" secondAttribute="leading" id="QzF-8T-fS5"/>
-                            <constraint firstItem="mlx-05-0tO" firstAttribute="trailing" secondItem="5R7-EX-opX" secondAttribute="trailing" constant="9" id="Yuv-27-YhV"/>
-                            <constraint firstItem="mlx-05-0tO" firstAttribute="bottom" secondItem="5R7-EX-opX" secondAttribute="bottom" constant="8" id="ZKL-bS-ibu"/>
                             <constraint firstItem="dSe-Nd-FFD" firstAttribute="bottom" secondItem="mlx-05-0tO" secondAttribute="bottom" id="bDS-Qn-RN5"/>
+                            <constraint firstItem="mlx-05-0tO" firstAttribute="trailing" secondItem="5R7-EX-opX" secondAttribute="trailing" constant="14" id="xfQ-RK-eB1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mlx-05-0tO"/>
                     </view>
