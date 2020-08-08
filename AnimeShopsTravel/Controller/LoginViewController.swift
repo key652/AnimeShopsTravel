@@ -14,18 +14,24 @@ class LoginViewController: UIViewController {
     weak var authDelegate: AuthDelegate?
     private let authModel = AuthModel()
     let alert = AlertCreateView()
+    private var loginButtonConstraint: NSLayoutConstraint?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = myView
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
         view.sendSubviewToBack(view)
         myView.addressTextField.delegate = self
         myView.passwordTextField.delegate = self
         self.authDelegate = authModel
         buttonActionSet()
         customNavigationBar()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setUpNotificationForButton()
     }
     
     
@@ -70,6 +76,29 @@ class LoginViewController: UIViewController {
         myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
         myView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordButtonTaped), for: .touchUpInside)
     }
+    
+    private func setUpNotificationForButton() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey]as! NSValue).cgRectValue
+        let keyboardOriginY = view.frame.size.height - keyboardSize.height
+        let loginButtonOriginY = myView.loginButton.frame.origin.y
+        if keyboardOriginY < loginButtonOriginY {
+            myView.loginConstraint?.constant = -(view.frame.size.height - keyboardOriginY)
+        }
+    }
+    
+    
+    @objc private func keyboardWillHide(notification: Notification) {
+        myView.loginConstraint?.constant = -148
+    }
+    
 
     
 }

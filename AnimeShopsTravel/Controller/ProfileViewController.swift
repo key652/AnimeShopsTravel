@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = myView
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
         view.sendSubviewToBack(view)
         myView.userNameTextField.delegate = self
         self.userDefaultsDelegate = userDefaultsModel
@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController {
         myView.profileImageView.layer.masksToBounds = false
         myView.profileImageView.layer.cornerRadius = myView.profileImageView.frame.width / 2.0
         myView.profileImageView.clipsToBounds = true
+        setUpNotificationForButton()
     }
     
     
@@ -62,6 +63,28 @@ class ProfileViewController: UIViewController {
         myView.profileImageView.addGestureRecognizer(tap)
         myView.profileImageView.isUserInteractionEnabled = true
     }
+    
+    private func setUpNotificationForButton() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey]as! NSValue).cgRectValue
+        let keyboardOriginY = view.frame.size.height - keyboardSize.height
+        let changeProfileButtonOriginY = myView.changeProfileButton.frame.origin.y
+        if keyboardOriginY < changeProfileButtonOriginY {
+            myView.changeProfileButtonConstraint?.constant = -(view.frame.size.height - keyboardOriginY)
+        }
+    }
+    
+    
+    @objc private func keyboardWillHide(notification: Notification) {
+        myView.changeProfileButtonConstraint?.constant = -159
+    }
 
     
 }
@@ -85,6 +108,9 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         let cropController = CropViewController(croppingStyle: .default, image: contentImage)
         cropController.delegate = self
         cropController.customAspectRatio = myView.profileImageView.frame.size
+        cropController.aspectRatioPickerButtonHidden = true
+        cropController.resetButtonHidden = true
+        cropController.rotateButtonsHidden = true
         picker.dismiss(animated: true) {
             self.present(cropController, animated: true, completion: nil)
          }
