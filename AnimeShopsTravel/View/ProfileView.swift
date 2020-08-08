@@ -30,7 +30,7 @@ class ProfileView: UIView {
         addSubview(changeProfileButton)
         
         userNameTextField.borderStyle = .bezel
-        changeProfileButton.setTitle("更新", for: .normal)
+        changeProfileButton.setTitle("変更", for: .normal)
         changeProfileButton.setTitleColor(UIColor.black, for: .normal)
         changeProfileButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         changeProfileButton.backgroundColor = CustomColor.mainColor
