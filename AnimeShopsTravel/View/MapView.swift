@@ -44,10 +44,10 @@ class MapView: UIView {
         mapView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         mapView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         mapView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        trackingButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -30).isActive = true
+        trackingButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -25).isActive = true
         trackingButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
-        trackingButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        trackingButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        trackingButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        trackingButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
     }
 }
 

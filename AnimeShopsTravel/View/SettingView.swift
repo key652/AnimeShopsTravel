@@ -34,8 +34,8 @@ class SettingView: UIView {
         settingProfileButton.setTitle("変更", for: .normal)
         logoutButton.setTitle("ログアウト", for: .normal)
         
-        settingProfileButton.setTitleColor(UIColor.white, for: .normal)
-        logoutButton.setTitleColor(UIColor.white, for: .normal)
+        settingProfileButton.setTitleColor(UIColor.black, for: .normal)
+        logoutButton.setTitleColor(UIColor.black, for: .normal)
         
         settingProfileButton.backgroundColor = CustomColor.mainColor
         logoutButton.backgroundColor = CustomColor.logoutButtonColor
@@ -44,9 +44,9 @@ class SettingView: UIView {
         settingProfileButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         logoutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         
-        settingProfileButton.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        settingProfileButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         settingProfileButton.layer.shadowColor = UIColor.black.cgColor
-        settingProfileButton.layer.shadowOpacity = 0.6
+        settingProfileButton.layer.shadowOpacity = 0.3
         
     }
     

@@ -42,7 +42,7 @@ class ContributionView: UIView {
         contributionButton.setTitle("投稿", for: .normal)
         contributionButton.setTitleColor(UIColor.white, for: .normal)
         contributionButton.backgroundColor = CustomColor.mainColor
-        contributionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        contributionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         cancelButton.setTitle("キャンセル", for: .normal)
         cancelButton.setTitleColor(UIColor.black, for: .normal)
         

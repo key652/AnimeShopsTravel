@@ -13,6 +13,7 @@ class SignupView: UIView {
     var addressTextField = UITextField()
     var passwordTextField = UITextField()
     var signupButton = UIButton()
+    var signupConstraint: NSLayoutConstraint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,13 +41,13 @@ class SignupView: UIView {
         addressTextField.borderStyle = .bezel
         passwordTextField.borderStyle = .bezel
         
-        signupButton.setTitle("新規登録", for: .normal)
-        signupButton.setTitleColor(UIColor.white, for: .normal)
+        signupButton.setTitle("アカウント作成", for: .normal)
+        signupButton.setTitleColor(UIColor.black, for: .normal)
         signupButton.backgroundColor = CustomColor.mainColor
-        signupButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
-        signupButton.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        signupButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        signupButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         signupButton.layer.shadowColor = UIColor.black.cgColor
-        signupButton.layer.shadowOpacity = 0.6
+        signupButton.layer.shadowOpacity = 0.3
         
         
     }
@@ -72,9 +73,10 @@ class SignupView: UIView {
         passwordTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -45).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        signupButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 57).isActive = true
-        signupButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -57).isActive = true
-        signupButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -147).isActive = true
+        signupButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        signupButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
+        signupConstraint = signupButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -147)
+        signupConstraint?.isActive = true
         signupButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
     }
 }

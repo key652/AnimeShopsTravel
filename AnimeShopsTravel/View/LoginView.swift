@@ -14,6 +14,7 @@ class LoginView: UIView {
     var loginButton = UIButton()
     var signupButton = UIButton()
     var resetPasswordButton = UIButton()
+    var loginConstraint: NSLayoutConstraint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,27 +42,23 @@ class LoginView: UIView {
         passwordTextField.borderStyle = .bezel
         
         loginButton.setTitle("ログイン", for: .normal)
-        signupButton.setTitle("新規登録", for: .normal)
+        signupButton.setTitle("アカウント作成", for: .normal)
         resetPasswordButton.setTitle("パスワードをお忘れになった場合", for: .normal)
         
-        loginButton.setTitleColor(UIColor.white, for: .normal)
-        signupButton.setTitleColor(CustomColor.mainColor, for: .normal)
+        loginButton.setTitleColor(UIColor.black, for: .normal)
+        signupButton.setTitleColor(UIColor.black, for: .normal)
         resetPasswordButton.setTitleColor(UIColor.blue, for: .normal)
         
-        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
-        signupButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        signupButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         resetPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         
         loginButton.backgroundColor = CustomColor.mainColor
-        signupButton.backgroundColor = UIColor.white
+        signupButton.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
         
-        loginButton.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        loginButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         loginButton.layer.shadowColor = UIColor.black.cgColor
-        loginButton.layer.shadowOpacity = 0.6
-        
-        signupButton.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-        signupButton.layer.shadowColor = UIColor.black.cgColor
-        signupButton.layer.shadowOpacity = 0.6
+        loginButton.layer.shadowOpacity = 0.3
         
     }
     
@@ -82,9 +79,10 @@ class LoginView: UIView {
         passwordTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -45).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 57).isActive = true
-        loginButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -57).isActive = true
-        loginButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -148).isActive = true
+        loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        loginButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
+        loginConstraint = loginButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -125)
+        loginConstraint?.isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
         signupButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 57).isActive = true
