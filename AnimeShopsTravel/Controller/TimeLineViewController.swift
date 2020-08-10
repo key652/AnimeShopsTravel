@@ -33,7 +33,7 @@ class TimeLineViewController: UIViewController {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         setMyUid()
-        contentsListDelegate?.fetchContentsData(tableView: timeLineTableView)
+        contentsListDelegate?.fetchContentsData(tableView: timeLineTableView, indicator: indicator)
     }
     
     
@@ -41,7 +41,7 @@ class TimeLineViewController: UIViewController {
         if myUid == sender.blockUid {
             alert.alertCreate(title: "自分のアカウントはブロックできません。", message: "", actionTitle: "OK", viewCotroller: self)
         }else {
-            contentsListDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid, tableView: timeLineTableView)
+            contentsListDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid, tableView: timeLineTableView, indicator: indicator)
         }
     }
     

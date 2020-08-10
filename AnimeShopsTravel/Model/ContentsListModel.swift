@@ -10,8 +10,8 @@ import Foundation
 import Firebase
 
 protocol ContentsListDelegate: class {
-    func fetchContentsData(tableView: UITableView)
-    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView)
+    func fetchContentsData(tableView: UITableView, indicator: UIActivityIndicatorView)
+    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView, indicator: UIActivityIndicatorView)
 }
 
 class ContentsListModel: ContentsListDelegate {
@@ -19,7 +19,8 @@ class ContentsListModel: ContentsListDelegate {
     public var contentsArray = [Contents]()
     
     
-    func fetchContentsData(tableView: UITableView) {
+    func fetchContentsData(tableView: UITableView, indicator: UIActivityIndicatorView) {
+        indicator.startAnimating()
         let ref = Database.database().reference().child("timeLine").queryOrdered(byChild: "createAt").observe(.value) { (snapshots) in
             self.contentsArray.removeAll()
             let snapshot = snapshots.children.allObjects as! [DataSnapshot]
@@ -32,14 +33,15 @@ class ContentsListModel: ContentsListDelegate {
                     tableView.reloadData()
                 }
             }
+            indicator.stopAnimating()
         }
     }
     
-    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView) {
+    func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView, indicator: UIActivityIndicatorView) {
         let alert = UIAlertController(title: "ブロック", message: "このユーザーをブロックしますか？", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "ブロックする", style: .default) { (alert) in
                 UserDefaults.standard.set(blockUid, forKey: "\(blockUid)")
-                self.fetchContentsData(tableView: tableView)
+                self.fetchContentsData(tableView: tableView, indicator: indicator)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alert.addAction(action)
