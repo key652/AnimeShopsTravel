@@ -27,6 +27,11 @@ class AuthModel: AuthDelegate {
             if error != nil {
                 self.alert.alertCreate(title: "メールアドレスまたはパスワードが間違っています", message: "", actionTitle: "OK", viewCotroller: viewController)
             }else{
+                if UserDefaults.standard.object(forKey: "profileImageData") == nil {
+                    guard let profileImage = UIImage(named: "noimage") else { return }
+                    guard let profileImageData = profileImage.jpegData(compressionQuality: 0.1) else { return }
+                    UserDefaults.standard.set(profileImageData, forKey: "profileImageData")
+                }
                 guard let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: "tabBar") else
                 { return }
                 viewController.navigationController?.pushViewController(nextVC, animated: true)
