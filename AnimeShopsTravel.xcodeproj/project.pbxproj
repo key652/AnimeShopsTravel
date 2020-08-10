@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DE35E77A095A947DE61FA53B /* Pods_AnimeShopsTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */; };
+		EA06451624E1A6E200E931D6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA06451524E1A6E200E931D6 /* index.html */; };
 		EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83624C34604008E65C8 /* MapViewController.swift */; };
 		EA17D83924C346CF008E65C8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83824C346CF008E65C8 /* MapView.swift */; };
-		EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83C24C36C2C008E65C8 /* CustomColor.swift */; };
 		EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83E24C37164008E65C8 /* ShopPinsData.swift */; };
 		EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6B24C3438B00F6111F /* AppDelegate.swift */; };
 		EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6D24C3438B00F6111F /* SceneDelegate.swift */; };
@@ -19,20 +19,21 @@
 		EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7724C3438C00F6111F /* Assets.xcassets */; };
 		EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */; };
 		EA4E61C324D5A5600061892D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E61C224D5A5600061892D /* ShopViewController.swift */; };
-		EA4F8F3824CC6C080096E9EE /* ContentsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */; };
 		EA4F8F3A24CC75C80096E9EE /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3924CC75C80096E9EE /* ContributionView.swift */; };
 		EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */; };
-		EA4F8F3F24CCA6CB0096E9EE /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */; };
-		EA4F8F4324CD46990096E9EE /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */; };
 		EA4F8F4924CD8FF80096E9EE /* GoogleService-Info-9.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */; };
 		EA4F8F4B24CD91770096E9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */; };
-		EA529B3C24CB2C1000C53E1A /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA529B3B24CB2C1000C53E1A /* Contents.swift */; };
 		EA53BE3324C9CEB30078669E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3224C9CEB30078669E /* TopView.swift */; };
 		EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3424C9D63F0078669E /* TopViewController.swift */; };
 		EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3824C9D8CA0078669E /* LoginView.swift */; };
 		EA53BE3B24C9E91A0078669E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3A24C9E91A0078669E /* LoginViewController.swift */; };
-		EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3C24CA709B0078669E /* AuthModel.swift */; };
-		EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */; };
+		EA54772D24DF038B00A963EE /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772924DF038B00A963EE /* ContributionModel.swift */; };
+		EA54772E24DF038B00A963EE /* ContentsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772824DF038B00A963EE /* ContentsListModel.swift */; };
+		EA54772F24DF038B00A963EE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772B24DF038B00A963EE /* AuthModel.swift */; };
+		EA54773024DF038B00A963EE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772724DF038B00A963EE /* Contents.swift */; };
+		EA54773124DF038B00A963EE /* AlertCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772C24DF038B00A963EE /* AlertCreateView.swift */; };
+		EA54773224DF038B00A963EE /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54772A24DF038B00A963EE /* CustomColor.swift */; };
+		EA54773724DF0AF200A963EE /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54773624DF0AF200A963EE /* ProfileDataModel.swift */; };
 		EA54A8A924CF03AE005CDD27 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54A8A824CF03AE005CDD27 /* SettingView.swift */; };
 		EA54A8AB24CF09CA005CDD27 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54A8AA24CF09CA005CDD27 /* SettingViewController.swift */; };
 		EA55700924D1A97300C86DE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55700824D1A97300C86DE3 /* ProfileViewController.swift */; };
@@ -51,9 +52,9 @@
 		0AF3E13CEBAF49E877823178 /* Pods-AnimeShopsTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.release.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.release.xcconfig"; sourceTree = "<group>"; };
 		10FD69648F2CECA02645465A /* Pods-AnimeShopsTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.debug.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeShopsTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA06451524E1A6E200E931D6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		EA17D83624C34604008E65C8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EA17D83824C346CF008E65C8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		EA17D83C24C36C2C008E65C8 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		EA17D83E24C37164008E65C8 /* ShopPinsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPinsData.swift; sourceTree = "<group>"; };
 		EA243A6824C3438B00F6111F /* AnimeShopsTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeShopsTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA243A6B24C3438B00F6111F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,20 +65,21 @@
 		EA243A7A24C3438C00F6111F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA243A7C24C3438C00F6111F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4E61C224D5A5600061892D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsListModel.swift; sourceTree = "<group>"; };
 		EA4F8F3924CC75C80096E9EE /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
-		EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionModel.swift; sourceTree = "<group>"; };
-		EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-9.plist"; sourceTree = "<group>"; };
 		EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EA529B3B24CB2C1000C53E1A /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		EA53BE3224C9CEB30078669E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		EA53BE3424C9D63F0078669E /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		EA53BE3824C9D8CA0078669E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EA53BE3A24C9E91A0078669E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EA53BE3C24CA709B0078669E /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
-		EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreateView.swift; sourceTree = "<group>"; };
+		EA54772724DF038B00A963EE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		EA54772824DF038B00A963EE /* ContentsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsListModel.swift; sourceTree = "<group>"; };
+		EA54772924DF038B00A963EE /* ContributionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionModel.swift; sourceTree = "<group>"; };
+		EA54772A24DF038B00A963EE /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		EA54772B24DF038B00A963EE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		EA54772C24DF038B00A963EE /* AlertCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreateView.swift; sourceTree = "<group>"; };
+		EA54773624DF0AF200A963EE /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
 		EA54A8A824CF03AE005CDD27 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		EA54A8AA24CF09CA005CDD27 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		EA55700824D1A97300C86DE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */,
 				EA243A7C24C3438C00F6111F /* Info.plist */,
 				EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */,
+				EA06451524E1A6E200E931D6 /* index.html */,
 				EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */,
 				EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */,
 			);
@@ -196,13 +199,13 @@
 		EA243A8424C343EF00F6111F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA17D83C24C36C2C008E65C8 /* CustomColor.swift */,
-				EA53BE3E24CA7D4A0078669E /* AlertCreateView.swift */,
-				EA529B3B24CB2C1000C53E1A /* Contents.swift */,
-				EA4F8F4224CD46990096E9EE /* UserDefaultsModel.swift */,
-				EA53BE3C24CA709B0078669E /* AuthModel.swift */,
-				EA4F8F3724CC6C080096E9EE /* ContentsListModel.swift */,
-				EA4F8F3E24CCA6CB0096E9EE /* ContributionModel.swift */,
+				EA54772C24DF038B00A963EE /* AlertCreateView.swift */,
+				EA54772B24DF038B00A963EE /* AuthModel.swift */,
+				EA54772724DF038B00A963EE /* Contents.swift */,
+				EA54772824DF038B00A963EE /* ContentsListModel.swift */,
+				EA54772924DF038B00A963EE /* ContributionModel.swift */,
+				EA54772A24DF038B00A963EE /* CustomColor.swift */,
+				EA54773624DF0AF200A963EE /* ProfileDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				EA4F8F4B24CD91770096E9EE /* GoogleService-Info.plist in Resources */,
 				EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */,
 				EA4F8F4924CD8FF80096E9EE /* GoogleService-Info-9.plist in Resources */,
+				EA06451624E1A6E200E931D6 /* index.html in Resources */,
 				EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */,
 				EA243A7324C3438B00F6111F /* Main.storyboard in Resources */,
 			);
@@ -340,31 +344,31 @@
 				EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */,
 				EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */,
 				EA54A8AB24CF09CA005CDD27 /* SettingViewController.swift in Sources */,
-				EA53BE3D24CA709B0078669E /* AuthModel.swift in Sources */,
 				EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */,
-				EA17D83D24C36C2C008E65C8 /* CustomColor.swift in Sources */,
 				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
+				EA54772F24DF038B00A963EE /* AuthModel.swift in Sources */,
 				EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */,
+				EA54773024DF038B00A963EE /* Contents.swift in Sources */,
 				EA5B132E24CB00D800239073 /* AreaViewController.swift in Sources */,
+				EA54773724DF0AF200A963EE /* ProfileDataModel.swift in Sources */,
 				EA55700924D1A97300C86DE3 /* ProfileViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
+				EA54772E24DF038B00A963EE /* ContentsListModel.swift in Sources */,
 				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
 				EA5B132C24CAF24B00239073 /* TabBarViewController.swift in Sources */,
-				EA4F8F3824CC6C080096E9EE /* ContentsListModel.swift in Sources */,
+				EA54772D24DF038B00A963EE /* ContributionModel.swift in Sources */,
 				EA5B132624CAA3F700239073 /* SignupView.swift in Sources */,
 				EA5B132824CAAC1200239073 /* SignupViewController.swift in Sources */,
+				EA54773124DF038B00A963EE /* AlertCreateView.swift in Sources */,
 				EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */,
 				EA53BE3924C9D8CA0078669E /* LoginView.swift in Sources */,
 				EA53BE3324C9CEB30078669E /* TopView.swift in Sources */,
 				EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */,
 				EA85619D24D406AA004B4C92 /* ProfileView.swift in Sources */,
 				EA4F8F3A24CC75C80096E9EE /* ContributionView.swift in Sources */,
-				EA4F8F3F24CCA6CB0096E9EE /* ContributionModel.swift in Sources */,
-				EA529B3C24CB2C1000C53E1A /* Contents.swift in Sources */,
 				EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */,
-				EA4F8F4324CD46990096E9EE /* UserDefaultsModel.swift in Sources */,
 				EA54A8A924CF03AE005CDD27 /* SettingView.swift in Sources */,
-				EA53BE3F24CA7D4A0078669E /* AlertCreateView.swift in Sources */,
+				EA54773224DF038B00A963EE /* CustomColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.key.AnimeShopsTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -535,6 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.key.AnimeShopsTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
