@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DE35E77A095A947DE61FA53B /* Pods_AnimeShopsTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */; };
-		EA06451624E1A6E200E931D6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA06451524E1A6E200E931D6 /* index.html */; };
+		EA06451824E1AE6400E931D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA06451724E1AE6400E931D6 /* GoogleService-Info.plist */; };
 		EA17D83724C34604008E65C8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83624C34604008E65C8 /* MapViewController.swift */; };
-		EA17D83924C346CF008E65C8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83824C346CF008E65C8 /* MapView.swift */; };
 		EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17D83E24C37164008E65C8 /* ShopPinsData.swift */; };
 		EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6B24C3438B00F6111F /* AppDelegate.swift */; };
 		EA243A6E24C3438B00F6111F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243A6D24C3438B00F6111F /* SceneDelegate.swift */; };
@@ -21,7 +20,6 @@
 		EA4E61C324D5A5600061892D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E61C224D5A5600061892D /* ShopViewController.swift */; };
 		EA4F8F3A24CC75C80096E9EE /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3924CC75C80096E9EE /* ContributionView.swift */; };
 		EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */; };
-		EA4F8F4924CD8FF80096E9EE /* GoogleService-Info-9.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */; };
 		EA4F8F4B24CD91770096E9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */; };
 		EA53BE3324C9CEB30078669E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3224C9CEB30078669E /* TopView.swift */; };
 		EA53BE3524C9D63F0078669E /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53BE3424C9D63F0078669E /* TopViewController.swift */; };
@@ -45,6 +43,7 @@
 		EA5B133024CB07D200239073 /* AreaShopsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B132F24CB07D200239073 /* AreaShopsData.swift */; };
 		EA5B133324CB0F8900239073 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133224CB0F8900239073 /* WebView.swift */; };
 		EA5B133624CB11B100239073 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133524CB11B100239073 /* TimeLineViewController.swift */; };
+		EA6DA5F824E5752B007BCFB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DA5F724E5752B007BCFB2 /* CoreLocation.framework */; };
 		EA85619D24D406AA004B4C92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85619C24D406AA004B4C92 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +51,8 @@
 		0AF3E13CEBAF49E877823178 /* Pods-AnimeShopsTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.release.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.release.xcconfig"; sourceTree = "<group>"; };
 		10FD69648F2CECA02645465A /* Pods-AnimeShopsTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeShopsTravel.debug.xcconfig"; path = "Target Support Files/Pods-AnimeShopsTravel/Pods-AnimeShopsTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeShopsTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA06451524E1A6E200E931D6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EA06451724E1AE6400E931D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA17D83624C34604008E65C8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		EA17D83824C346CF008E65C8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		EA17D83E24C37164008E65C8 /* ShopPinsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPinsData.swift; sourceTree = "<group>"; };
 		EA243A6824C3438B00F6111F /* AnimeShopsTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeShopsTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA243A6B24C3438B00F6111F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 		EA4E61C224D5A5600061892D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		EA4F8F3924CC75C80096E9EE /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		EA4F8F3B24CC90940096E9EE /* ContributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
-		EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-9.plist"; sourceTree = "<group>"; };
 		EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA53BE3224C9CEB30078669E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		EA53BE3424C9D63F0078669E /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +88,7 @@
 		EA5B132F24CB07D200239073 /* AreaShopsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaShopsData.swift; sourceTree = "<group>"; };
 		EA5B133224CB0F8900239073 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EA5B133524CB11B100239073 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		EA6DA5F724E5752B007BCFB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA85619C24D406AA004B4C92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6DA5F824E5752B007BCFB2 /* CoreLocation.framework in Frameworks */,
 				DE35E77A095A947DE61FA53B /* Pods_AnimeShopsTravel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +108,7 @@
 		3605B9620208C3676766C033 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA6DA5F724E5752B007BCFB2 /* CoreLocation.framework */,
 				778D8B3153CBE20F39AD8A76 /* Pods_AnimeShopsTravel.framework */,
 			);
 			name = Frameworks;
@@ -155,8 +155,7 @@
 				EA243A7924C3438C00F6111F /* LaunchScreen.storyboard */,
 				EA243A7C24C3438C00F6111F /* Info.plist */,
 				EA243A7424C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld */,
-				EA06451524E1A6E200E931D6 /* index.html */,
-				EA4F8F4824CD8FF80096E9EE /* GoogleService-Info-9.plist */,
+				EA06451724E1AE6400E931D6 /* GoogleService-Info.plist */,
 				EA4F8F4A24CD91770096E9EE /* GoogleService-Info.plist */,
 			);
 			path = AnimeShopsTravel;
@@ -168,7 +167,6 @@
 				EA53BE3224C9CEB30078669E /* TopView.swift */,
 				EA53BE3824C9D8CA0078669E /* LoginView.swift */,
 				EA5B132524CAA3F700239073 /* SignupView.swift */,
-				EA17D83824C346CF008E65C8 /* MapView.swift */,
 				EA5B133224CB0F8900239073 /* WebView.swift */,
 				EA4F8F3924CC75C80096E9EE /* ContributionView.swift */,
 				EA54A8A824CF03AE005CDD27 /* SettingView.swift */,
@@ -281,10 +279,9 @@
 			files = (
 				EA4F8F4B24CD91770096E9EE /* GoogleService-Info.plist in Resources */,
 				EA243A7B24C3438C00F6111F /* LaunchScreen.storyboard in Resources */,
-				EA4F8F4924CD8FF80096E9EE /* GoogleService-Info-9.plist in Resources */,
-				EA06451624E1A6E200E931D6 /* index.html in Resources */,
 				EA243A7824C3438C00F6111F /* Assets.xcassets in Resources */,
 				EA243A7324C3438B00F6111F /* Main.storyboard in Resources */,
+				EA06451824E1AE6400E931D6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +351,6 @@
 				EA55700924D1A97300C86DE3 /* ProfileViewController.swift in Sources */,
 				EA17D83F24C37164008E65C8 /* ShopPinsData.swift in Sources */,
 				EA54772E24DF038B00A963EE /* ContentsListModel.swift in Sources */,
-				EA17D83924C346CF008E65C8 /* MapView.swift in Sources */,
 				EA5B132C24CAF24B00239073 /* TabBarViewController.swift in Sources */,
 				EA54772D24DF038B00A963EE /* ContributionModel.swift in Sources */,
 				EA5B132624CAA3F700239073 /* SignupView.swift in Sources */,

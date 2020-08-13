@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="524-OY-FwH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="524-OY-FwH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -199,15 +199,43 @@
                     <view key="view" contentMode="scaleToFill" id="2gT-tk-I9n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="317-Rw-4ji">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIh-Ye-PKJ">
+                                <rect key="frame" x="354" y="751" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Uq-Hy-K1b"/>
+                                    <constraint firstAttribute="width" constant="40" id="af4-Dj-Rjc"/>
+                                </constraints>
+                                <state key="normal" image="ImageNorthUp"/>
+                                <connections>
+                                    <action selector="trackingButtonTaped:" destination="YsA-3S-C2x" eventType="touchUpInside" id="Tbf-03-AFf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="317-Rw-4ji" firstAttribute="top" secondItem="qaX-4f-SMk" secondAttribute="top" id="N21-LL-odb"/>
+                            <constraint firstItem="317-Rw-4ji" firstAttribute="leading" secondItem="qaX-4f-SMk" secondAttribute="leading" id="cYY-86-Dxx"/>
+                            <constraint firstItem="qaX-4f-SMk" firstAttribute="bottom" secondItem="uIh-Ye-PKJ" secondAttribute="bottom" constant="22" id="gh0-Wz-3Ws"/>
+                            <constraint firstItem="qaX-4f-SMk" firstAttribute="trailing" secondItem="uIh-Ye-PKJ" secondAttribute="trailing" constant="20" id="hWp-LS-aGf"/>
+                            <constraint firstItem="317-Rw-4ji" firstAttribute="bottom" secondItem="qaX-4f-SMk" secondAttribute="bottom" id="l5a-ud-GXV"/>
+                            <constraint firstItem="317-Rw-4ji" firstAttribute="trailing" secondItem="qaX-4f-SMk" secondAttribute="trailing" id="mso-fS-d5H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qaX-4f-SMk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="現在地から探す" image="map" catalog="system" selectedImage="map" id="vvM-QN-Ym0"/>
                     <navigationItem key="navigationItem" id="XVv-iq-96p"/>
+                    <connections>
+                        <outlet property="mapView" destination="317-Rw-4ji" id="1FI-3t-VFo"/>
+                        <outlet property="trackingButton" destination="uIh-Ye-PKJ" id="xzh-kZ-fM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh8-II-WsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3530" y="125"/>
+            <point key="canvasLocation" x="3528.985507246377" y="124.55357142857142"/>
         </scene>
         <!--アカウント設定-->
         <scene sceneID="jG8-PB-8I8">
@@ -352,7 +380,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dSe-Nd-FFD" firstAttribute="top" secondItem="mlx-05-0tO" secondAttribute="top" id="EmE-Ak-Q8v"/>
                             <constraint firstItem="mlx-05-0tO" firstAttribute="bottom" secondItem="5R7-EX-opX" secondAttribute="bottom" constant="13" id="GnK-A6-DU8"/>
@@ -434,6 +462,7 @@
         <segue reference="omc-99-Acw"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="ImageNorthUp" width="256" height="256"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="113"/>
