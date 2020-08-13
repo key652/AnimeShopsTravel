@@ -33,6 +33,10 @@ class SignupView: UIView {
         
         passwordTextField.isSecureTextEntry = true
         
+        nameTextField.returnKeyType = .done
+        addressTextField.returnKeyType = .done
+        passwordTextField.returnKeyType = .done
+        
         nameTextField.placeholder = "ユーザー名"
         addressTextField.placeholder = "メールアドレス"
         passwordTextField.placeholder = "パスワード"

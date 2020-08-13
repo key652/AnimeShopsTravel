@@ -35,6 +35,9 @@ class LoginView: UIView {
         
         passwordTextField.isSecureTextEntry = true
         
+        addressTextField.returnKeyType = .done
+        passwordTextField.returnKeyType = .done
+        
         addressTextField.placeholder = "メールアドレス"
         passwordTextField.placeholder = "パスワード"
         
@@ -59,6 +62,7 @@ class LoginView: UIView {
         loginButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         loginButton.layer.shadowColor = UIColor.black.cgColor
         loginButton.layer.shadowOpacity = 0.3
+        
         
     }
     
