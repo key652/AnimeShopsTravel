@@ -41,8 +41,10 @@ class ContentsListModel: ContentsListDelegate {
     func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView, indicator: UIActivityIndicatorView) {
         let alert = UIAlertController(title: "ブロック", message: "このユーザーをブロックしますか？", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "ブロックする", style: .default) { (alert) in
-                UserDefaults.standard.set(blockUid, forKey: "\(blockUid)")
-                self.fetchContentsData(tableView: tableView, indicator: indicator)
+            self.contentsArray.removeAll()
+            UserDefaults.standard.set(blockUid, forKey: "\(blockUid)")
+            self.fetchContentsData(tableView: tableView, indicator: indicator)
+            tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alert.addAction(action)

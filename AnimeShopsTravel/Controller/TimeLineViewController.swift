@@ -30,7 +30,7 @@ class TimeLineViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         setMyUid()
         contentsListDelegate?.fetchContentsData(tableView: timeLineTableView, indicator: indicator)
