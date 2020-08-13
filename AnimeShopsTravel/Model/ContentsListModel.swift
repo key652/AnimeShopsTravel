@@ -37,6 +37,7 @@ class ContentsListModel: ContentsListDelegate {
         }
     }
     
+    
     func selectedUserBlock(viewController: UIViewController, blockUid: String, tableView: UITableView, indicator: UIActivityIndicatorView) {
         let alert = UIAlertController(title: "ブロック", message: "このユーザーをブロックしますか？", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "ブロックする", style: .default) { (alert) in
@@ -60,7 +61,6 @@ class ContentsListModel: ContentsListDelegate {
         let createAt = self.convertTimeStamp(serverTimeStamp: createDate as! CLong)
         self.contentsArray.append(Contents(userName: userName , profileImage: profileImage , createAt: createAt, contentImage: contentImage , comment: comment , uid: userUid))
     }
-    
     
     
     private func convertTimeStamp(serverTimeStamp: CLong) -> String {
