@@ -11,37 +11,45 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
-    private var isFirst = false
-    private let myView = MapView()
-    private let customColor = CustomColor.mainColor
-    
-    override func loadView() {
-        super.loadView()
-        view = myView
-        view.sendSubviewToBack(myView.mapView)
-    }
+    private let mainColor = CustomColor.mainColor
+    private var locManager: CLLocationManager!
+    @IBOutlet weak var trackingButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locManager = CLLocationManager()
+        locManager.delegate = self
+        locManager.requestWhenInUseAuthorization()
+        mapView.delegate = self
+        initMap()
+        settingShopPins()
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidLayoutSubviews() {
-        if !isFirst {
-            isFirst = true
-            initMap()
+    
+    @IBAction func trackingButtonTaped(_ sender: Any) {
+        switch mapView.userTrackingMode{
+            case .follow:
+                mapView.userTrackingMode = .followWithHeading
+                let ImageHeadingUp = UIImage(named: "ImageHeadingUp")
+                trackingButton.setImage(ImageHeadingUp, for: .normal)
+                break
+            case.followWithHeading:
+                mapView.userTrackingMode = .none
+                let ImageScrollMode = UIImage(named: "ImageScrollMode")
+                trackingButton.setImage(ImageScrollMode, for: .normal)
+                break
+            default:
+                mapView.userTrackingMode = .follow
+                let ImageNorthUp = UIImage(named: "ImageNorthUp")
+                trackingButton.setImage(ImageNorthUp, for: .normal)
+                break
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        myView.mapView.delegate = self
-        //initMap()
-        setupLocationManager()
-        settingShopPins()
-        trackingButtonActionSet()
-    }
+    
     
 }
 
@@ -49,38 +57,12 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     
     private func initMap() {
-        var region: MKCoordinateRegion = myView.mapView.region
+        var region: MKCoordinateRegion = mapView.region
         region.span.latitudeDelta = 0.04
         region.span.longitudeDelta = 0.04
-        myView.mapView.setRegion(region, animated: true)
-        myView.mapView.showsUserLocation = true
-        myView.mapView.userTrackingMode = .follow
-    }
-    
-    
-    private func trackingButtonActionSet() {
-        myView.trackingButton.addTarget(self, action: #selector(trackingButtonTaped), for: .touchUpInside)
-    }
-    
-    
-    @objc func trackingButtonTaped() {
-        switch myView.mapView.userTrackingMode{
-            case .follow:
-                myView.mapView.userTrackingMode = .followWithHeading
-                let ImageHeadingUp = UIImage(named: "ImageHeadingUp")
-                myView.trackingButton.setImage(ImageHeadingUp, for: .normal)
-                break
-            case.followWithHeading:
-                myView.mapView.userTrackingMode = .none
-                let ImageScrollMode = UIImage(named: "ImageScrollMode")
-                myView.trackingButton.setImage(ImageScrollMode, for: .normal)
-                break
-            default:
-                myView.mapView.userTrackingMode = .follow
-                let ImageNorthUp = UIImage(named: "ImageNorthUp")
-                myView.trackingButton.setImage(ImageNorthUp, for: .normal)
-                break
-        }
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
     }
     
     
@@ -90,7 +72,12 @@ extension MapViewController: MKMapViewDelegate {
         }
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
         pinView.canShowCallout = true
-        pinView.rightCalloutAccessoryView = myView.pinButton
+        let pinButton = UIButton()
+        pinButton.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        pinButton.setTitle("詳細", for: .normal)
+        pinButton.setTitleColor(UIColor.white, for: .normal)
+        pinButton.backgroundColor = mainColor
+        pinView.rightCalloutAccessoryView = pinButton
         return pinView
     }
     
@@ -101,8 +88,8 @@ extension MapViewController: MKMapViewDelegate {
             annotation.coordinate = CLLocationCoordinate2DMake(ShopPinsData.latitudeArray[i], ShopPinsData.longtudeArray[i])
             annotation.title = ShopPinsData.nameDataArray[i]
             annotation.subtitle = ShopPinsData.addressArray[i]
-            myView.mapView.addAnnotation(annotation)
-            myView.mapView.delegate = self
+            mapView.addAnnotation(annotation)
+            mapView.delegate = self
         }
     }
     
@@ -122,38 +109,43 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     
+    
 }
 
 
 extension MapViewController: CLLocationManagerDelegate {
     
-    private func setupLocationManager() {
-        let locManager = CLLocationManager()
-        locManager.delegate = self
-        locManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            let staus = CLLocationManager.authorizationStatus()
-            if staus == .authorizedAlways || staus == .authorizedWhenInUse {
-                locManager.startUpdatingLocation()
-            }
-        }
-    }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if myView.mapView.userTrackingMode == .none{
-            myView.trackingButton.setImage(UIImage(named: "ImageScrollMode"), for: .normal)
-        }
-        switch myView.mapView.userTrackingMode {
-        case .followWithHeading:
-            myView.mapView.userTrackingMode = .followWithHeading
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .restricted, .denied:
             break
-        case .follow:
-            myView.mapView.userTrackingMode = .follow
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.startUpdatingLocation()
             break
         default:
             break
         }
     }
-
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if mapView.userTrackingMode == .none{
+            trackingButton.setImage(UIImage(named: "ImageScrollMode"), for: .normal)
+        }
+        switch mapView.userTrackingMode {
+        case .followWithHeading:
+            mapView.userTrackingMode = .followWithHeading
+            break
+        case .follow:
+            mapView.userTrackingMode = .follow
+            break
+        default:
+            break
+        }
+    }
+    
+    
+    
 }
