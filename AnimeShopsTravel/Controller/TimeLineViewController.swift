@@ -25,15 +25,16 @@ class TimeLineViewController: UIViewController {
         timeLineTableView.delegate = self
         timeLineTableView.dataSource = self
         indicatorSet()
+        timeLineTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
     }
     
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         setMyUid()
         contentsListDelegate?.fetchContentsData(tableView: timeLineTableView, indicator: indicator)
+        timeLineTableView.tableFooterView = UIView(frame: .zero)
     }
     
     
@@ -110,6 +111,7 @@ extension TimeLineViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         timeLineTableView.deselectRow(at: indexPath, animated: true)
     }
+    
     
     
 }

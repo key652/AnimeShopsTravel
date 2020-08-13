@@ -18,6 +18,8 @@ class ShopViewController: UIViewController {
         super.viewDidLoad()
         shopTableView.delegate = self
         shopTableView.dataSource = self
+        shopTableView.tableFooterView = UIView(frame: .zero)
+        shopTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9796229005, blue: 0.9598469873, alpha: 1)
     }
     
 }
