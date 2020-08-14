@@ -13,6 +13,9 @@ class SignupView: UIView {
     var addressTextField = UITextField()
     var passwordTextField = UITextField()
     var signupButton = UIButton()
+    var checkButton = UIButton()
+    var TOSButton = UIButton()
+    var TOSLabel = UILabel()
     var signupConstraint: NSLayoutConstraint?
     
     override init(frame: CGRect) {
@@ -30,6 +33,9 @@ class SignupView: UIView {
         addSubview(addressTextField)
         addSubview(passwordTextField)
         addSubview(signupButton)
+        addSubview(checkButton)
+        addSubview(TOSButton)
+        addSubview(TOSLabel)
         
         passwordTextField.isSecureTextEntry = true
         
@@ -53,16 +59,32 @@ class SignupView: UIView {
         signupButton.layer.shadowColor = UIColor.black.cgColor
         signupButton.layer.shadowOpacity = 0.3
         
+        checkButton.setImage(UIImage(named: "check_off"), for: .normal)
+        checkButton.setImage(UIImage(named: "check_on"), for: .selected)
+        
+        TOSButton.setTitle("利用規約", for: .normal)
+        TOSButton.setTitleColor(UIColor.blue, for: .normal)
+        TOSButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        
+        TOSLabel.text = "に同意します"
+        TOSLabel.textColor = UIColor.black
+        TOSLabel.font = UIFont.systemFont(ofSize: 16)
+        
         
     }
+    
+    
     
     private func setLayout() {
         nameTextField.translatesAutoresizingMaskIntoConstraints = false
         addressTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         signupButton.translatesAutoresizingMaskIntoConstraints = false
+        checkButton.translatesAutoresizingMaskIntoConstraints = false
+        TOSButton.translatesAutoresizingMaskIntoConstraints = false
+        TOSLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        nameTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 55).isActive = true
+        nameTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         nameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45).isActive = true
         nameTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -45).isActive = true
         nameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -82,5 +104,20 @@ class SignupView: UIView {
         signupConstraint = signupButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -147)
         signupConstraint?.isActive = true
         signupButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        
+        checkButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10).isActive = true
+        checkButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 57).isActive = true
+        checkButton.heightAnchor.constraint(equalToConstant: 26).isActive = true
+        checkButton.widthAnchor.constraint(equalToConstant: 26).isActive = true
+        
+        TOSButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10).isActive = true
+        TOSButton.leadingAnchor.constraint(equalTo: checkButton.trailingAnchor, constant: 8).isActive = true
+        TOSButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        TOSButton.widthAnchor.constraint(equalToConstant: 82).isActive = true
+        
+        TOSLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10).isActive = true
+        TOSLabel.leadingAnchor.constraint(equalTo: TOSButton.trailingAnchor, constant: 3).isActive = true
+        TOSLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        TOSLabel.widthAnchor.constraint(equalToConstant: 118).isActive = true
     }
 }

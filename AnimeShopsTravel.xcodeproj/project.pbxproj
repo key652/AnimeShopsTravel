@@ -44,6 +44,7 @@
 		EA5B133324CB0F8900239073 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133224CB0F8900239073 /* WebView.swift */; };
 		EA5B133624CB11B100239073 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B133524CB11B100239073 /* TimeLineViewController.swift */; };
 		EA6DA5F824E5752B007BCFB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DA5F724E5752B007BCFB2 /* CoreLocation.framework */; };
+		EA80F7B724E6DBC9002CF234 /* TOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA80F7B624E6DBC9002CF234 /* TOSViewController.swift */; };
 		EA85619D24D406AA004B4C92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85619C24D406AA004B4C92 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		EA5B133224CB0F8900239073 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EA5B133524CB11B100239073 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		EA6DA5F724E5752B007BCFB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA80F7B624E6DBC9002CF234 /* TOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOSViewController.swift; sourceTree = "<group>"; };
 		EA85619C24D406AA004B4C92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				EA53BE3424C9D63F0078669E /* TopViewController.swift */,
 				EA53BE3A24C9E91A0078669E /* LoginViewController.swift */,
 				EA5B132724CAAC1200239073 /* SignupViewController.swift */,
+				EA80F7B624E6DBC9002CF234 /* TOSViewController.swift */,
 				EA5B132B24CAF24B00239073 /* TabBarViewController.swift */,
 				EA17D83624C34604008E65C8 /* MapViewController.swift */,
 				EA5B132D24CB00D800239073 /* AreaViewController.swift */,
@@ -341,6 +344,7 @@
 				EA243A6C24C3438B00F6111F /* AppDelegate.swift in Sources */,
 				EA57918324C42B2000BED8B7 /* WebViewController.swift in Sources */,
 				EA54A8AB24CF09CA005CDD27 /* SettingViewController.swift in Sources */,
+				EA80F7B724E6DBC9002CF234 /* TOSViewController.swift in Sources */,
 				EA4F8F3C24CC90940096E9EE /* ContributionViewController.swift in Sources */,
 				EA243A7624C3438B00F6111F /* AnimeShopsTravel.xcdatamodeld in Sources */,
 				EA54772F24DF038B00A963EE /* AuthModel.swift in Sources */,
@@ -510,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5ZNBFUQB6Y;
 				INFOPLIST_FILE = AnimeShopsTravel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5ZNBFUQB6Y;
 				INFOPLIST_FILE = AnimeShopsTravel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

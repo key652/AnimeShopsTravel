@@ -59,11 +59,12 @@
                     <navigationItem key="navigationItem" id="ht2-7n-hEu"/>
                     <connections>
                         <segue destination="vbs-1e-88u" kind="show" id="hVF-lQ-KIm"/>
+                        <segue destination="h74-kY-Tcr" kind="show" id="YHq-4i-MJG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GE-Jt-eZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="579"/>
+            <point key="canvasLocation" x="1789.8550724637682" y="578.57142857142856"/>
         </scene>
         <!--エリア検索-->
         <scene sceneID="PNT-zN-fIz">
@@ -272,6 +273,162 @@
             </objects>
             <point key="canvasLocation" x="4304" y="-1222"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KIC-ds-U1t">
+            <objects>
+                <viewController storyboardIdentifier="TOS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h74-kY-Tcr" customClass="TOSViewController" customModule="AnimeShopsTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cN-gF-Lpm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bJd-eC-cT6">
+                                <rect key="frame" x="20" y="203" width="374" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">この規約は、お客様が、Yuma Yada(以下『制作者』)が提供するアニメショップ巡り(以下『本サービス』)をご利用頂く際の取扱いにつき定めるものです。本規約に同意した上で本サービスをご利用ください。
+
+
+第１条（定義）
+　本規約上で使用する用語の定義は、次に掲げるとおりとします。
+（1）本サービス:制作者が運営するサービス及び関連するサービス
+（2）本サイト:本サービスのコンテンツが掲載されたウェブサイト
+（3）本コンテンツ:本サービス上で提供される文字、音、静止画、動画、ソフトウェアプログラム、コード等の総称（投稿情報を含む）
+（4）利用者:本サービスを利用する全ての方
+（5）登録利用者:本サイトの利用者登録が完了した方
+（6）ＩＤ:本サービスの利用のために登録利用者が固有に持つ文字列
+（7）パスワード:ＩＤに対応して登録利用者が固有に設定する暗号
+（8）投稿:登録利用者が文章、文字列、画像、コメント等を掲載する行為
+（9）投稿情報:登録利用者が投稿等により掲載した文章、文字列、画像、コメント等の情報の総称
+（10）個人情報:住所、氏名、職業、電話番号等個人を特定することのできる情報の総称
+（11）登録情報:登録利用者が本サイトにて登録した情報の総称（投稿情報は除く）
+（12）知的財産:発明、考案、植物の新品種、意匠、著作物その他の人間の創造的活動により生み出されるもの（発見または解明がされた自然の法則または現象であって、産業上の利用可能性があるものを含む）、商標、商号その他事業活動に用いられる商品または役務を表示するもの及び営業秘密その他の事業活動に有用な技術上または営業上の情報
+（13）知的財産権:特許権、実用新案権、育成者権、意匠権、著作権、商標権その他の知的財産に関して法令により定められた権利または法律上保護される利益に係る権利                                                                                            第２条（本規約への同意）
+１　利用者は、本利用規約に同意頂いた上で、本サービスを利用できるものとします。
+２　利用者が、本サービスをスマートフォンその他の情報端末にダウンロードし、本規約への同意手続を行った時点で、利用者と当社との間で、本規約の諸規定に従った利用契約が成立するものとします。
+３　利用者が未成年者である場合には、親権者その他の法定代理人の同意を得たうえで、本サービスをご利用ください。
+４　未成年者の利用者が、法定代理人の同意がないにもかかわらず同意があると偽りまたは年齢について成年と偽って本サービスを利用した場合、その他行為能力者であることを信じさせるために詐術を用いた場合、本サービスに関する一切の法律行為を取り消すことは出来ません。
+５ 本規約の同意時に未成年であった利用者が成年に達した後に本サービスを利用した場合、当該利用者は本サービスに関する一切の法律行為を追認したものとみなされます。
+
+第３条（規約の変更）
+１　制作者は、利用者の承諾を得ることなく、いつでも、本規約の内容を改定することができるものとし、利用者はこれを異議なく承諾するものとします。
+２　制作者は、本規約を改定するときは、その内容について当社所定の方法により利用者に通知します。
+３　前本規約の改定の効力は、制作者が前項により通知を行った時点から生じるものとします。
+４　利用者は、本規約変更後、本サービスを利用した時点で、変更後の本利用規約に異議なく同意したものとみなされます。
+
+第４条（アカウントの管理）
+１　利用者は、利用に際して登録した情報（以下、「登録情報」といいます。メールアドレスやID・パスワード等を含みます）について、自己の責任の下、任意に登録、管理するものとします。利用者は、これを第三者に利用させ、または貸与、譲渡、名義変更、売買などをしてはならないものとします。
+２　制作者は、登録情報によって本サービスの利用があった場合、利用登録をおこなった本人が利用したものと扱うことができ、当該利用によって生じた結果ならびにそれに伴う一切の責任については、利用登録を行った本人に帰属するものとします。 
+３　利用者は、登録情報の不正使用によって制作者または第三者に損害が生じた場合、制作者および第三者に対して、当該損害を賠償するものとします。 
+４　登録情報の管理は、利用者が自己の責任の下で行うものとし、登録情報が不正確または虚偽であったために利用者が被った一切の不利益および損害に関して、制作者は責任を負わないものとします。 
+５　登録情報が盗用されまたは第三者に利用されていることが判明した場合、利用者は直ちにその旨を制作者に通知するとともに、当社からの指示に従うものとします。
+
+第５条（個人情報等の取り扱い） 
+個人情報及び利用者情報については、当社が別途定める「アニメショップ巡りプライバシーポリシー」に則り、適正に取り扱うこととします。
+
+第６条（禁止行為）　
+本サービスの利用に際し、制作者は、利用者（以下「利用者」）に対し、次に掲げる行為を禁止します。当社において、利用者が禁止事項に違反したと認めた場合、利用停止、投稿削除等、当社において必要と判断した措置を取ることができるものとし、利用者はこれを異議なく同意するものとします。
+（１）当社または第三者の知的財産権を侵害する行為
+（２）当社または第三者の名誉・信用を毀損または不当に差別もしくは誹謗中傷する行為
+（３）制作者または第三者の財産を侵害する行為、または侵害する恐れのある行為 
+（４）制作者または第三者に経済的損害を与える行為
+（５）制作者または第三者に対する脅迫的な行為
+（６）利用者が、以下の情報を投稿すること
+①第三者の権利および財産に対して損害を与えるリスクのある情報
+②第三者に対して有害な情報、第三者を身体的・心理的に傷つける情報
+③犯罪や不法行為、危険行為に属する情報およびそれらを教唆、幇助する情報
+④不法、有害、脅迫、虐待、人種差別、中傷、名誉棄損、侮辱、ハラスメント、扇動、不快を与えることを意図し、もしくはそのような結果を生じさせる恐れのある内容をもつ情報
+⑤事実に反する、または存在しないと分かっている情報
+⑥利用者自身がコントロール可能な権利を持たない情報
+⑦第三者の著作権を含む知的財産権やその他の財産権を侵害する情報、公共の利益または個人の権利を侵害する情報
+⑧わいせつ、児童ポルノまたは児童虐待にあたる画像、文書等の情報
+⑨医師法などの法令に違反する情報
+⑩その他当社が不適切と判断する情報
+（７）コンピューターウィルス、有害なプログラムを仕様またはそれを誘発する行為 
+（８）本サービス用インフラ設備に対して過度な負担となるストレスをかける行為 
+（９）当サイトのサーバーやシステム、セキュリティへの攻撃 
+（１０）制作者提供のインターフェース以外の方法で制作者サービスにアクセスを試みる行為
+（１１）一人の利用者が、複数の利用者IDを取得する行為
+（１２）上記の他、当社が不適切と判断する行為
+
+第７条 （コンテンツの取り扱い）
+１　利用者は､本サービスのコンテンツを制作者の定める範囲内でのみ使用することができるものとします｡ 
+２　本サービスで提供される全てのコンテンツに関する権利は当社が有しており､利用者に対し､制作者が有する特許権､実用新案権､ 意匠権､商標権､著作権､その他知的財産権の実施または使用許諾をするものではありません｡ 
+３　利用者は､制作者の定める使用範囲を超えていかなる方法によっても複製､送信､譲渡（利用者同士の売買も含みます）､貸与､翻訳､翻案、無断で転載、二次使用、営利目的の使用、改変、逆アセンブル、逆コンパイル、リバースエンジニアリング等を行う事を禁止します。 
+４　前項に関わらず､退会等により利用者が利用者資格を喪失した場合は､提供されたコンテンツの使用権も消滅するものとします｡ 
+５　利用者が、本サービス上に投稿その他の方法で送信したコンテンツ（静止画、動画、文字情報その他一切の情報）に関する著作権（著作権法第21条ないし同第28条に規定する権利を含む全ての著作権を含む。）については利用者に帰属するものとします。ただし、利用者は、コンテンツの送信時に、制作者に対し、日本国内外において、当該コンテンツを無償かつ非独占的に使用することを許諾します。
+６　利用者は本サービス内では、著作者人格権を行使しないものとします。
+
+第８条（免責）
+１　制作者は、本サービスの内容変更、中断、終了によって生じたいかなる損害についても、一切責任を負いません。
+２　制作者は、利用者の本サービスの利用環境について一切関与せず、また一切の責任を負いません。
+３　制作者は、本サービスが利用者の特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、利用者による本サービスの利用が利用者に適用のある法令または業界団体の内部規則等に適合すること、および不具合が生じないことについて、何ら保証するものではありません。
+４　制作者は、本サービスが全ての情報端末に対応していることを保証するものではなく、本サービスの利用に供する情報端末のＯＳのバージョンアップ等に伴い、本サービスの動作に不具合が生じる可能性があることにつき、利用者はあらかじめ了承するものとします。当社は、かかる不具合が生じた場合に制作者が行うプログラムの修正等により、当該不具合が解消されることを保証するものではありません。
+５　利用者は、AppStore、GooglePlay等のサービスストアの利用規約および運用方針の変更等に伴い、本サービスの一部又は全部の利用が制限される可能性があることをあらかじめ了承するものとします。
+６　制作者は、本サービスを利用したことにより直接的または間接的に利用者に発生した損害について、一切賠償責任を負いません。
+７　制作者は、利用者その他の第三者に発生した機会逸失、業務の中断その他いかなる損害（間接損害や逸失利益を含みます）に対して、制作者が係る損害の可能性を事前に通知されていたとしても、一切の責任を負いません。
+８　他の利用者または第三者から投稿についての削除依頼があった時、制作者の判断で削除の可否を決定できるものとし、当該判断により生じた一切の責任について、制作者は責任を負わないものとします。
+９　第１項乃至前項の規定は、制作者に故意または重過失が存する場合又は契約書が消費者契約法上の消費者に該当する場合には適用しません。
+１０　前項が適用される場合であっても、制作者は、過失（重過失を除きます。）による行為によって利用者に生じた損害のうち、特別な事情から生じた損害については、一切賠償する責任を負わないものとします。　
+１１　本サービスの利用に関し制作者が損害賠償責任を負う場合、当該損害が発生した月に利用者から受領した利用額を限度として賠償責任を負うものとします。
+１２　利用者と他の利用者との間の紛争及びトラブルについて、当社は一切責任を負わないものとします。利用者と他の利用者でトラブルになった場合でも、両者同士の責任で解決するものとし、当社には一切の請求をしないものとします。
+１３　利用者は、本サービスの利用に関連し、他の利用者に損害を与えた場合または第三者との間に紛争を生じた場合、自己の費用と責任において、かかる損害を賠償またはかかる紛争を解決するものとし、制作者には一切の迷惑や損害を与えないものとします。
+１４　利用者の行為により、第三者から制作者が損害賠償等の請求をされた場合には、利用者の費用（弁護士費用）と責任で、これを解決するものとします。制作者が、当該第三者に対して、損害賠償金を支払った場合には、利用者は、制作者に対して当該損害賠償金を含む一切の費用（弁護士費用及び逸失利益を含む）を支払うものとします。
+１５　利用者が本サービスの利用に関連して制作者に損害を与えた場合、利用者の費用と責任において制作者に対して損害を賠償（訴訟費用及び弁護士費用を含む）するものとします。
+１６　本サービスで他の利用者が投稿した情報の正確性について、制作者は保証しません。制作者は、本サービスに掲載されている情報についての紛争及びトラブルについて一切の責任を負いません。
+
+第９条（広告の掲載について） 
+利用者は、本サービス上にあらゆる広告が含まれる場合があること、制作者またはその提携先があらゆる広告を掲載する場合があることを理解しこれを承諾したものとみなします。本サービス上の広告の形態や範囲は、制作者によって随時変更されます。 
+
+第１０条（権利譲渡の禁止）
+１　利用者は、予め当社の書面による承諾がない限り、本規約上の地位および本規約に基づく権利または義務の全部または一部を第三者に譲渡してはならないものとします。
+２　制作者は、本サービスの全部または一部を当社の裁量により第三者に譲渡することができ、その場合、譲渡された権利の範囲内で利用者のアカウントを含む、本サービスに係る利用者の一切の権利が譲渡先に移転するものとします。
+
+第１１条（分離可能性）
+本規約のいずれかの条項又はその一部が、消費者契約法その他の法令等により無効又は執行不能と判断された場合であっても、本規約の残りの規定及び一部が無効又は執行不能と判断された規定の残りの部分は、継続して完全に効力を有するものとします。
+
+第１２条（当社への連絡方法）
+本サービスに関する利用者の制作者へのご連絡・お問い合わせは、rizegotiusa0130@gmail.comまでよろしくお願いいたします。
+
+第１３条（準拠法、管轄裁判所）
+１　本規約の有効性，解釈及び履行については，日本法に準拠し，日本法に従って解釈されるものとする。
+２　制作者と利用者等との間での論議・訴訟その他一切の紛争については、訴額に応じて、東京簡易裁判所又は東京地方裁判所を専属的合意管轄裁判所とします｡
+
+２０２０年８月１５日　施行
+</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8N-ei-Zac">
+                                <rect key="frame" x="52" y="122" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CfY-xm-ELZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N8N-ei-Zac" firstAttribute="top" secondItem="y8R-ra-pP5" secondAttribute="top" constant="34" id="Hld-5O-N1S"/>
+                            <constraint firstItem="bJd-eC-cT6" firstAttribute="leading" secondItem="y8R-ra-pP5" secondAttribute="leading" constant="20" id="Jzh-sr-rWH"/>
+                            <constraint firstItem="N8N-ei-Zac" firstAttribute="leading" secondItem="y8R-ra-pP5" secondAttribute="leading" constant="52" id="QoF-KT-cC3"/>
+                            <constraint firstItem="y8R-ra-pP5" firstAttribute="trailing" secondItem="N8N-ei-Zac" secondAttribute="trailing" constant="52" id="bjb-Hq-93w"/>
+                            <constraint firstItem="y8R-ra-pP5" firstAttribute="bottom" secondItem="bJd-eC-cT6" secondAttribute="bottom" constant="18" id="eAQ-bf-cqT"/>
+                            <constraint firstItem="y8R-ra-pP5" firstAttribute="trailing" secondItem="bJd-eC-cT6" secondAttribute="trailing" constant="20" id="laa-c8-n0j"/>
+                            <constraint firstItem="bJd-eC-cT6" firstAttribute="top" secondItem="N8N-ei-Zac" secondAttribute="bottom" constant="51" id="zEZ-mn-BGS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y8R-ra-pP5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V2h-aZ-6E6"/>
+                    <connections>
+                        <outlet property="textView" destination="bJd-eC-cT6" id="IJo-Dn-649"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cJ-Tg-WbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.8550724637682" y="1265.625"/>
+        </scene>
         <!--タイムライン-->
         <scene sceneID="gTm-q9-PIe">
             <objects>
@@ -459,7 +616,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="omc-99-Acw"/>
+        <segue reference="hVF-lQ-KIm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ImageNorthUp" width="256" height="256"/>

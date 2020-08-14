@@ -10,6 +10,7 @@ import UIKit
 
 class SignupViewController: UIViewController {
     private let myView = SignupView()
+    private let alert = AlertCreateView()
     private let authModel = AuthModel()
     weak var authDelegate:AuthDelegate?
 
@@ -33,10 +34,25 @@ class SignupViewController: UIViewController {
     }
     
     @objc private func signupButtonTaped() {
-        guard let userName = myView.nameTextField.text else { return }
-        guard let email = myView.addressTextField.text else { return }
-        guard let password = myView.passwordTextField.text else { return }
-        authDelegate?.singup(email: email, password: password, name: userName, viewController: self)
+        if myView.checkButton.isSelected {
+            guard let userName = myView.nameTextField.text else { return }
+            guard let email = myView.addressTextField.text else { return }
+            guard let password = myView.passwordTextField.text else { return }
+            authDelegate?.singup(email: email, password: password, name: userName, viewController: self)
+        }else{
+            alert.alertCreate(title: "利用規約に同意しないと新規登録できません", message: "", actionTitle: "OK", viewCotroller: self)
+        }
+    }
+    
+    
+    @objc private func checkButtonTaped() {
+        myView.checkButton.isSelected = !myView.checkButton.isSelected
+    }
+    
+    
+    @objc private func TOSButtonTaped() {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TOS")as! TOSViewController
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     
@@ -49,6 +65,8 @@ class SignupViewController: UIViewController {
     
     private func ButtonActionSet() {
         myView.signupButton.addTarget(self, action: #selector(signupButtonTaped), for: .touchUpInside)
+        myView.checkButton.addTarget(self, action: #selector(checkButtonTaped), for: .touchUpInside)
+        myView.TOSButton.addTarget(self, action: #selector(TOSButtonTaped), for: .touchUpInside)
     }
     
     
