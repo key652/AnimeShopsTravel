@@ -284,7 +284,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bJd-eC-cT6">
                                 <rect key="frame" x="20" y="203" width="374" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">この規約は、お客様が、Yuma Yada(以下『制作者』)が提供するアニメショップ巡り(以下『本サービス』)をご利用頂く際の取扱いにつき定めるものです。本規約に同意した上で本サービスをご利用ください。
+                                <string key="text">この規約は、お客様が、Yuma Yada(以下『制作者』)が提供するアニメショップ巡り(以下『本サービス』)をご利用頂く際の取扱いにつき定めるものです。本規約に同意した上で本サービスをご利用ください。
 
 
 第１条（定義）
@@ -393,7 +393,7 @@
 ２　制作者と利用者等との間での論議・訴訟その他一切の紛争については、訴額に応じて、東京簡易裁判所又は東京地方裁判所を専属的合意管轄裁判所とします｡
 
 ２０２０年８月１５日　施行
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
