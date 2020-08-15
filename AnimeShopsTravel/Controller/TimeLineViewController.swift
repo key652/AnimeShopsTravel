@@ -9,8 +9,9 @@
 import UIKit
 import SDWebImage
 import Firebase
+import MessageUI
 
-class TimeLineViewController: UIViewController {
+class TimeLineViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var timeLineTableView: UITableView!
     private var myUid:String?
     private let contentsListModel = ContentsListModel()
@@ -42,7 +43,7 @@ class TimeLineViewController: UIViewController {
         if myUid == sender.blockUid {
             alert.alertCreate(title: "自分のアカウントはブロックできません。", message: "", actionTitle: "OK", viewCotroller: self)
         }else {
-            contentsListDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid, tableView: timeLineTableView, indicator: indicator)
+            contentsListDelegate?.selectedUserBlock(viewController: self, blockUid: sender.blockUid, tableView: timeLineTableView, indicator: indicator, userName: sender.userName, comment: sender.comment, createAt: sender.createAt)
         }
     }
     
@@ -99,6 +100,9 @@ extension TimeLineViewController: UITableViewDelegate, UITableViewDataSource {
         
         let blockButton = cell.viewWithTag(6)as! BlockButton
         blockButton.blockUid = contentsArray[contentsArray.count - indexPath.row - 1].uid
+        blockButton.userName = contentsArray[contentsArray.count - indexPath.row - 1].userName
+        blockButton.comment = contentsArray[contentsArray.count - indexPath.row - 1].comment
+        blockButton.createAt = contentsArray[contentsArray.count - indexPath.row - 1].createAt
         blockButton.addTarget(self, action: #selector(blockButtonTaped(_:)), for: .touchUpInside)
         
         return cell

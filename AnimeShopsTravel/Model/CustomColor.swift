@@ -14,5 +14,8 @@ struct CustomColor {
 
 class BlockButton: UIButton {
     var blockUid: String = ""
+    var userName: String = ""
+    var comment: String = ""
+    var createAt: String = ""
 }
 
