@@ -1,5 +1,3 @@
 # アニメショップ巡り
 
-![git](result.git
-Go to file
-)
+![git](result.git)
