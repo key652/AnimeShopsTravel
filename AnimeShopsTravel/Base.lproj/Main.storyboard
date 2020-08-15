@@ -489,24 +489,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGk-rP-1Dn" customClass="BlockButton" customModule="AnimeShopsTravel" customModuleProvider="target">
-                                                    <rect key="frame" x="328" y="27" width="62" height="29"/>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGk-rP-1Dn" customClass="BlockButton" customModule="AnimeShopsTravel" customModuleProvider="target">
+                                                    <rect key="frame" x="332" y="27" width="62" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="62" id="7j1-ek-2kD"/>
-                                                        <constraint firstAttribute="height" constant="29" id="KEt-9U-MLM"/>
+                                                        <constraint firstAttribute="height" constant="29" id="Bwc-hw-z08"/>
+                                                        <constraint firstAttribute="width" constant="62" id="cXH-Qo-HuI"/>
                                                     </constraints>
-                                                    <state key="normal" title="ブロック"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <state key="normal" image="chevron.down" catalog="system">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MJm-1f-cme" firstAttribute="leading" secondItem="gKI-jc-qQq" secondAttribute="leading" constant="12" id="373-bd-EAk"/>
+                                                <constraint firstItem="vGk-rP-1Dn" firstAttribute="top" secondItem="gKI-jc-qQq" secondAttribute="topMargin" constant="16" id="3mf-aW-PRK"/>
                                                 <constraint firstAttribute="trailing" secondItem="cxj-va-yGe" secondAttribute="trailing" constant="12" id="6Wz-eP-1IS"/>
                                                 <constraint firstItem="B0l-ey-41h" firstAttribute="top" secondItem="dyQ-5H-sQw" secondAttribute="bottom" constant="9" id="6pu-rC-vLr"/>
-                                                <constraint firstItem="vGk-rP-1Dn" firstAttribute="top" secondItem="gKI-jc-qQq" secondAttribute="topMargin" constant="16" id="7n0-RP-nfg"/>
                                                 <constraint firstItem="cxj-va-yGe" firstAttribute="top" secondItem="lzg-Oz-TpT" secondAttribute="bottom" constant="8" id="BT6-E8-83u"/>
                                                 <constraint firstAttribute="trailing" secondItem="MJm-1f-cme" secondAttribute="trailing" constant="12" id="Cx8-Wd-OaC"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dyQ-5H-sQw" secondAttribute="trailing" constant="21" id="DZQ-Ff-pTg"/>
                                                 <constraint firstItem="lzg-Oz-TpT" firstAttribute="top" secondItem="gKI-jc-qQq" secondAttribute="topMargin" id="Jql-x1-QjG"/>
+                                                <constraint firstItem="vGk-rP-1Dn" firstAttribute="trailing" secondItem="gKI-jc-qQq" secondAttribute="trailingMargin" id="R5z-fE-way"/>
                                                 <constraint firstItem="cxj-va-yGe" firstAttribute="leading" secondItem="gKI-jc-qQq" secondAttribute="leading" constant="12" id="VS4-Kb-L0e"/>
                                                 <constraint firstItem="lzg-Oz-TpT" firstAttribute="leading" secondItem="gKI-jc-qQq" secondAttribute="leadingMargin" id="Vg6-Kq-HrR"/>
                                                 <constraint firstItem="B0l-ey-41h" firstAttribute="leading" secondItem="lzg-Oz-TpT" secondAttribute="trailing" constant="8" id="Whx-Zf-oA9"/>
@@ -514,7 +519,6 @@
                                                 <constraint firstItem="dyQ-5H-sQw" firstAttribute="top" secondItem="gKI-jc-qQq" secondAttribute="topMargin" id="dnQ-3q-grt"/>
                                                 <constraint firstItem="MJm-1f-cme" firstAttribute="top" secondItem="cxj-va-yGe" secondAttribute="bottom" constant="8" id="goF-hh-h1L"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="B0l-ey-41h" secondAttribute="trailing" constant="21" id="vyh-bw-w6E"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vGk-rP-1Dn" secondAttribute="trailing" constant="4" id="zgw-oS-TmQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.9796229005" blue="0.95984698729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -620,6 +624,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ImageNorthUp" width="256" height="256"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="113"/>
