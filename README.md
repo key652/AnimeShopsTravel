@@ -19,3 +19,17 @@
 
 * タイムライン機能  
 アニメショップの情報を投稿することで、このアプリを使っている他のユーザーに情報を共有することができます。
+
+
+
+## 使用した技術
+* xcode
+* swift
+* firebase
+
+
+
+## 製作者
+* ![Twitter](https://twitter.com/Y47125069)
+* ![Qiita](https://qiita.com/key652)
+* ![Wantedly](https://www.wantedly.com/users/133512652)
