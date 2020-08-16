@@ -30,6 +30,6 @@
 
 
 ## 製作者
-* ![Twitter](https://twitter.com/Y47125069)
-* ![Qiita](https://qiita.com/key652)
-* ![Wantedly](https://www.wantedly.com/users/133512652)
+* [Twitter](https://twitter.com/Y47125069)
+* [Qiita](https://qiita.com/key652)
+* [Wantedly](https://www.wantedly.com/users/133512652)
