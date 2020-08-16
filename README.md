@@ -25,7 +25,7 @@
 ## 使用した技術
 * xcode
 * swift
-* firebase
+* Firebase
 
 
 
