@@ -1,6 +1,5 @@
 # アニメショップ巡り
 家の近くや旅行先、帰省先などで簡単にアニメショップを探すことができるアプリです。
-[Appstore](https://apps.apple.com/us/app/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E5%B7%A1%E3%82%8A/id1526977940?mt=8)
 
 ![location](https://user-images.githubusercontent.com/67212981/90326417-114b8480-dfc3-11ea-8fd6-c3298305d18f.gif)
 ![timeLine](https://user-images.githubusercontent.com/67212981/90326384-c7fb3500-dfc2-11ea-96df-d04d5465b21b.gif)
