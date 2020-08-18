@@ -1,4 +1,4 @@
-# アニメショップ巡り
+# [アニメショップ巡り](https://apps.apple.com/us/app/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E5%B7%A1%E3%82%8A/id1526977940?mt=8)
 家の近くや旅行先、帰省先などで簡単にアニメショップを探すことができるアプリです。
 
 ![location](https://user-images.githubusercontent.com/67212981/90326417-114b8480-dfc3-11ea-8fd6-c3298305d18f.gif)
