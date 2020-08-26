@@ -23,9 +23,19 @@
 
 
 ## 使用した技術
-* xcode
-* swift
-* Firebase
+* 開発環境  
+  * xcode
+* 使用言語
+  * Swift
+* DB
+  * Firebase Realtime Databse
+  * UserDefaults
+* ライブラリ
+  * Firebase Auth,Storage,Messaging
+  * SVProgressHUD
+  * SDWebImage
+  * CropViewController
+
 
 
 
